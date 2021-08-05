@@ -1,0 +1,433 @@
+:export {
+  largeBreakpoint: 600px;
+  smallBreakpoint: 430px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+}
+
+.grid-container-index {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 1rem minmax(5rem, 6rem) repeat(12, 1fr) 1rem;
+  grid-template-rows: 100px calc(100vh - 120px) 1rem minmax(4rem, max-content) auto 200px;
+  gap: 8px;
+  grid-template-areas: ". nav nav nav nav nav nav nav nav nav nav nav nav nav ." ". hero hero hero hero hero hero hero hero hero hero hero hero hero ." ". . . . . . . . . . . . . . ." ". . content content content content content content content content content content content . ." ". . content content content content content content content content content content content . ." "footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer";
+}
+
+@media only screen and (max-width: 600px) {
+  .grid-container-index {
+    grid-template-areas: ". nav nav nav nav nav nav nav nav nav nav nav nav nav ." ". hero hero hero hero hero hero hero hero hero hero hero hero hero ." ". . . . . . . . . . . . . . ." ". content content content content content content content content content content content content content ." ". content content content content content content content content content content content content content ." "footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer";
+  }
+}
+@media only screen and (max-width: 430px) {
+  .grid-container-index {
+    grid-template-rows: 150px calc(100vh - 120px) 1rem minmax(4rem, max-content) auto 200px;
+  }
+}
+.grid-container-sidebar {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 1rem minmax(5rem, 6rem) repeat(12, 1fr) 1rem;
+  grid-template-rows: 100px minmax(4rem, max-content) auto 200px;
+  gap: 8px;
+  grid-template-areas: ". nav nav nav nav nav nav nav nav nav nav nav nav nav ." ". lcell lcell . content content content content content content content content content . ." ". lcell lcell . content content content content content content content content content . ." "footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer";
+}
+
+@media only screen and (max-width: 600px) {
+  .grid-container-sidebar {
+    grid-template-areas: ". nav nav nav nav nav nav nav nav nav nav nav nav nav ." ". lcell lcell lcell lcell lcell lcell lcell lcell lcell lcell lcell lcell lcell ." ". content content content content content content content content content content content content content ." "footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer";
+  }
+}
+@media only screen and (max-width: 430px) {
+  .grid-container-sidebar {
+    grid-template-rows: 150px minmax(4rem, max-content) auto 200px;
+  }
+}
+.grid-container-post {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 1rem minmax(5rem, 6rem) repeat(12, 1fr) 1rem;
+  grid-template-rows: 100px minmax(4rem, max-content) auto 200px;
+  gap: 8px;
+  grid-template-areas: ". nav nav nav nav nav nav nav nav nav nav nav nav nav ." ". . . content content content content content content content content . . . ." ". . . content content content content content content content content . . . ." "footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer";
+}
+
+@media only screen and (max-width: 600px) {
+  .grid-container-post {
+    grid-template-areas: ". nav nav nav nav nav nav nav nav nav nav nav nav nav ." ". . content content content content content content content content content . . . ." ". . content content content content content content content content content . . . ." "footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer";
+  }
+}
+@media only screen and (max-width: 430px) {
+  .grid-container-post {
+    grid-template-rows: 150px minmax(4rem, max-content) auto 200px;
+    grid-template-areas: ". nav nav nav nav nav nav nav nav nav nav nav nav nav ." ". content content content content content content content content content content . . . ." ". content content content content content content content content content content . . . ." "footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer";
+  }
+}
+.nav-cell {
+  grid-area: nav;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border: solid;
+  border-radius: 0.2rem;
+  padding: 0.5rem;
+  background-color: #07265F;
+}
+.nav-cell img {
+  width: 3rem;
+  align-self: start;
+}
+.nav-cell li {
+  display: inline-block;
+}
+.nav-cell a, .nav-cell h2, .nav-cell span {
+  color: white;
+  text-decoration: none;
+  margin: 0 0.5rem;
+  padding: 3px;
+  border-radius: 0.25rem;
+}
+.nav-cell .current-nav {
+  background-color: white;
+  color: black;
+}
+.nav-cell form {
+  margin-bottom: 1.5rem;
+  align-self: flex-end;
+}
+.nav-cell button {
+  color: white;
+  background-color: black;
+  padding: 2px;
+}
+.nav-cell input {
+  border: solid;
+  border-radius: 0.2rem;
+}
+.nav-cell a:hover {
+  background-color: #fff;
+  color: black;
+}
+
+.menu {
+  display: none;
+}
+
+.menu:hover {
+  cursor: pointer;
+  color: black;
+  background-color: white;
+}
+
+.nav-items {
+  display: flex;
+  align-self: flex-end;
+}
+
+@media only screen and (max-width: 600px) {
+  .menu {
+    display: flex;
+  }
+
+  .nav-items {
+    position: absolute;
+    right: 1.7rem;
+    top: 108px;
+    padding: 8px;
+    background-color: #07265F;
+    border-radius: 0.25rem;
+    border: solid black 3px;
+  }
+  .nav-items ul {
+    display: flex;
+    flex-direction: column;
+  }
+  .nav-items li {
+    margin: 10px;
+  }
+
+  input {
+    width: 4rem;
+  }
+}
+@media only screen and (max-width: 430px) {
+  .nav-items {
+    position: absolute;
+    right: 1rem;
+    top: 158px;
+  }
+
+  .nav-cell {
+    flex-direction: column;
+  }
+}
+.hide {
+  display: none;
+}
+
+.column-menu {
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+}
+.gallery img {
+  width: 20vw;
+  margin: 1rem;
+}
+
+.blog-preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 33vh;
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem 1rem 0;
+  text-align: center;
+  border: solid;
+  border-radius: 0.2rem;
+}
+.blog-preview .blog-excerpt {
+  margin: 0.5rem;
+  font-size: 1rem;
+}
+.blog-preview .blog-data {
+  font-size: 0.8rem;
+}
+.blog-preview a {
+  color: black;
+}
+.blog-preview h1 {
+  margin-bottom: 0.2rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .blog-preview img {
+    width: 45vw;
+  }
+}
+.ex-size {
+  flex: 0 1 35vw;
+}
+
+.blog h1 {
+  text-align: center;
+  font-size: 3rem;
+}
+.blog .flex {
+  margin-top: 1rem;
+}
+.blog .comment {
+  width: 20rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+}
+.blog .column:nth-child(3) p {
+  margin: 1.2em 0;
+}
+.blog input {
+  height: 10rem;
+  width: 20rem;
+}
+.blog button {
+  background-color: #f0f;
+  width: 5rem;
+}
+
+.page img {
+  margin: 1rem 0;
+}
+
+/*
+	Table of Contents:
+
+	* Settings
+		./components/_grid-layouts.scss
+
+	Grid Layouts
+		./components/_grid-layouts.scss
+		./components/_grid-templates.scss
+
+	Grid Cells
+		./components/_navbar.scss
+		// Grid General Cells
+			// Hero Cell
+			// Main Content Cell
+			// Side Bar Cell, Left
+			// Footer Cell
+
+	Page Components
+		./components/_page-components.scss
+
+	FlexBox Classes
+		./components/_page-components.scss
+		// Mindless FlexBox Classes
+			display classes
+			organize classes
+
+	Variables(Colors, Breakpoints, etc)
+		./src/_variables.scss
+
+	Mixins
+		./src/_mixins.scss
+*/
+.hero-cell {
+  grid-area: hero;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: url("") no-repeat center;
+  background-size: contain;
+  border: solid;
+  border-radius: 0.2rem;
+  background-color: #17B6FF;
+  padding: 4rem;
+}
+.hero-cell div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.main-content-cell {
+  grid-area: content;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.5rem;
+  min-height: 100vh;
+}
+.main-content-cell img {
+  border: solid;
+  border-radius: 0.2rem;
+}
+
+@media only screen and (max-width: 430px) {
+  .main-content-cell > .column > img {
+    width: 80vw;
+  }
+}
+.sidebar-cell {
+  grid-area: lcell;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: #07265F;
+  padding: 0.5rem;
+  border: solid;
+  border-radius: 0.2rem;
+}
+.sidebar-cell a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0.4rem 0;
+  padding: 3px;
+  border-radius: 0.25rem;
+}
+.sidebar-cell a:hover {
+  background-color: #fff;
+  color: black;
+}
+
+@media only screen and (max-width: 600px) {
+  .sidebar-cell {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+}
+.footer-cell {
+  grid-area: footer;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top: solid;
+  background-color: #07265F;
+}
+.footer-cell i {
+  color: white;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-row {
+  display: flex;
+  justify-content: space-around;
+}
+
+.column {
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 430px) {
+  .bp-col {
+    flex-direction: column;
+  }
+}
+.wrap {
+  flex-wrap: wrap;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-space-between {
+  justify-content: space-between;
+}
+
+.justify-space-around {
+  justify-content: space-around;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.justify-self-end {
+  justify-self: flex-end;
+}
+
+.alignc-space-between {
+  align-content: space-between;
+}
+
+.aligni-items-center {
+  align-items: center;
+}
+
+.align-self-end {
+  align-self: flex-end;
+}
+
+.border {
+  border: solid;
+  border-radius: 0.2rem;
+}
+
+.p0 {
+  padding: 0;
+}
+
+.mt-5 {
+  margin-top: 5rem;
+}
+
+.mb-5 {
+  margin-bottom: 5rem;
+}
+
+/*# sourceMappingURL=style.css.map */

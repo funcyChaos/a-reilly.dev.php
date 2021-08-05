@@ -1,0 +1,150 @@
+@use '../src/variables';
+@use '../src/mixins';
+
+.nav-cell
+{
+	// So this is referencing the nav keywords in the grid-templates layout.
+	grid-area: nav;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+
+	@include mixins.main-border();
+	padding: .5rem;
+	
+	background-color: variables.$main-color;
+	
+	img
+	{
+		width: 3rem;
+		align-self: start;
+	}
+
+	li
+	{
+		display: inline-block;
+	}
+	
+	a, h2, span
+	{
+		color: white;
+		text-decoration: none;
+		margin: 0 .5rem;
+		padding: 3px;
+		border-radius: .25rem;
+	}
+	
+	.current-nav
+	{
+		background-color: white;
+		color: black;
+	}
+
+	form
+	{
+		margin-bottom: 1.5rem;
+		align-self: flex-end;
+	}
+
+	button
+	{
+		color: white;
+		background-color: black;
+
+		padding: 2px;
+	}
+
+	input
+	{
+		@include mixins.main-border();
+	}
+
+	a:hover
+	{
+		background-color: #fff;
+		color: black;
+	}
+}
+
+.menu
+{
+	display: none;
+}
+
+.menu:hover
+{
+	cursor: pointer;
+	color: black;
+	background-color: white;
+}
+
+
+.nav-items
+{
+	display: flex;
+	align-self: flex-end;
+}
+
+// Navbar Media Query
+@media only screen and (max-width: variables.$large-breakpoint)
+{
+	.menu
+	{
+		display: flex;
+	}
+
+	.nav-items
+	{
+		position: absolute;
+		right: 1.7rem;
+		top: 108px;
+		// top: 6.7rem;
+
+		padding: 8px;
+		background-color: variables.$main-color;
+		border-radius: .25rem;
+		border: solid black 3px;
+
+		ul
+		{
+			display: flex;
+			flex-direction: column;
+		}
+		li
+		{
+			margin: 10px;
+		}
+	}
+
+	input
+	{
+		width: 4rem;
+	}
+}
+
+@media only screen and (max-width: variables.$small-breakpoint)
+{
+	.nav-items
+	{
+		position: absolute;
+		right: 1rem;
+		top: 158px;
+	}
+	.nav-cell
+	{
+		flex-direction: column;
+	}
+}
+
+.hide
+{
+	display: none;
+}
+
+.column-menu
+{
+// display: flex;
+flex-direction: column;
+flex-wrap: wrap;
+}

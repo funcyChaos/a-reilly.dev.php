@@ -1,0 +1,61 @@
+// **************************************************************************************************************
+// Index Page Template w/ Hero
+
+$hero-index:
+  ". nav nav nav nav nav nav nav nav nav nav nav nav nav ."
+	". hero hero hero hero hero hero hero hero hero hero hero hero hero ."
+	". . . . . . . . . . . . . . ."
+	". . content content content content content content content content content content content . ."
+	". . content content content content content content content content content content content . ."
+	"footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer"
+;
+
+$mobile-hero-index:
+  ". nav nav nav nav nav nav nav nav nav nav nav nav nav ."
+	". hero hero hero hero hero hero hero hero hero hero hero hero hero ."
+	". . . . . . . . . . . . . . ."
+	". content content content content content content content content content content content content content ."
+	". content content content content content content content content content content content content content ."
+	"footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer"
+;
+
+// **************************************************************************************************************
+// Page Template w/ Sidebar
+
+$sidebar:
+  ". nav nav nav nav nav nav nav nav nav nav nav nav nav ."
+	". lcell lcell . content content content content content content content content content . ."
+	". lcell lcell . content content content content content content content content content . ."
+	"footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer"
+;
+
+$mobile-sidebar:
+  ". nav nav nav nav nav nav nav nav nav nav nav nav nav ."
+	". lcell lcell lcell lcell lcell lcell lcell lcell lcell lcell lcell lcell lcell ."
+	". content content content content content content content content content content content content content ."
+	"footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer"
+;
+
+// **************************************************************************************************************
+// Page Template w/ No Sidebar
+
+$post:
+  ". nav nav nav nav nav nav nav nav nav nav nav nav nav ."
+	". . . content content content content content content content content . . . ."
+	". . . content content content content content content content content . . . ."
+	"footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer"
+;
+
+$mobile-post:
+  ". nav nav nav nav nav nav nav nav nav nav nav nav nav ."
+	". . content content content content content content content content content . . . ."
+	". . content content content content content content content content content . . . ."
+	"footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer"
+;
+
+$e-mobile-post:
+	". nav nav nav nav nav nav nav nav nav nav nav nav nav ."
+	". content content content content content content content content content content . . . ."
+	". content content content content content content content content content content . . . ."
+	"footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer"
+;

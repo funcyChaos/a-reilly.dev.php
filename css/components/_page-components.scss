@@ -1,0 +1,132 @@
+@use '../src/mixins';
+@use '../src/variables';
+
+// ***********************************************
+// Specific Page Components
+
+// For Groups Of Images
+.gallery
+{
+	display: flex;
+	flex-wrap: wrap;
+
+	img
+	{
+		width: 20vw;
+
+		margin: 1rem;
+	}
+}
+
+@media only screen and (max-width: variables.$large-breakpoint)
+{
+	.gallery img
+	{
+		// width: 35vw;
+	}
+}
+
+// Poor Development, please revisit
+// For Blog Post Excerpts
+.blog-preview
+{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	min-height: 33vh;
+
+	margin-bottom: 1rem;
+	padding: .5rem 1rem 1rem 0;
+
+	text-align: center;
+	@include mixins.main-border;
+
+	// The Excerpt Div
+	.blog-excerpt
+	{
+		// padding: 1rem;
+		margin: .5rem;
+		font-size: 1rem;
+	}
+
+	// The Data Div
+	.blog-data
+	{
+		font-size: .8rem;
+	}
+
+	// Misc
+	// img
+	// {
+	// 	width: 25vw;
+	// }
+
+	a
+	{
+		color: black;
+	}
+	h1
+	{
+		margin-bottom: .2rem;
+	}
+}
+
+@media only screen and (max-width: variables.$large-breakpoint)
+{
+	.blog-preview img
+	{
+		width: 45vw;
+	}
+}
+
+.ex-size
+{
+	flex: 0 1 35vw;
+}
+
+// Major Blog Container
+.blog
+{
+	h1
+	{
+		text-align: center;
+		font-size: 3rem;
+	}
+
+	.flex
+	{
+		margin-top: 1rem;
+	}
+
+	.comment
+	{
+		width: 20rem;
+		margin-bottom: 2rem;
+		padding: 1rem;
+	}
+
+	.column:nth-child(3) p
+	{
+		margin: 1.2em 0;
+	}
+
+	input
+	{
+		height: 10rem;
+		width: 20rem;
+	}
+
+	button
+	{
+		background-color: #f0f;
+		width: 5rem;
+	}
+}
+
+.page img
+{
+	margin: 1rem 0;
+}
+
+// End Poor Development

@@ -1,0 +1,269 @@
+@use 'components/grid-layouts';
+@use 'components/navbar';
+@use './components/page-components';
+
+@use 'src/variables';
+@use 'src/mixins.scss';
+
+/*
+	Table of Contents:
+
+	* Settings
+		./components/_grid-layouts.scss
+
+	Grid Layouts
+		./components/_grid-layouts.scss
+		./components/_grid-templates.scss
+
+	Grid Cells
+		./components/_navbar.scss
+		// Grid General Cells
+			// Hero Cell
+			// Main Content Cell
+			// Side Bar Cell, Left
+			// Footer Cell
+
+	Page Components
+		./components/_page-components.scss
+
+	FlexBox Classes
+		./components/_page-components.scss
+		// Mindless FlexBox Classes
+			display classes
+			organize classes
+
+	Variables(Colors, Breakpoints, etc)
+		./src/_variables.scss
+
+	Mixins
+		./src/_mixins.scss
+*/
+
+// ***************************************************
+// Grid General Cells:
+
+// Hero Cell
+.hero-cell
+{
+	grid-area: hero;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	
+	background: url('') no-repeat center;
+	background-size: contain;
+
+	@include mixins.main-border();
+
+	background-color: variables.$second-color;
+
+	padding: 4rem;
+	div
+	{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+}
+
+// Main Content Cell
+.main-content-cell
+{
+	grid-area: content;
+
+	display: flex;
+	flex-wrap: wrap;
+
+	padding: .5rem;
+
+	min-height: 100vh;
+
+	// background-color: variables.$main-color;
+
+	img
+	{
+		@include mixins.main-border();
+	}
+}
+
+@media only screen and (max-width: variables.$small-breakpoint)
+{
+	.main-content-cell>.column>img
+	{
+		width: 80vw;
+	}
+}
+
+// Side Bar Cell, Left
+.sidebar-cell
+{
+	grid-area: lcell;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+
+	background-color: variables.$main-color;
+	
+	padding: .5rem;
+	@include mixins.main-border();
+	
+	
+	a
+	{
+		color: #fff;
+		text-decoration: none;
+		margin: .4rem 0;
+		padding: 3px;
+		border-radius: .25rem;
+	}
+	
+	a:hover
+	{
+		background-color: #fff;
+		color: black;
+	}
+}
+
+@media only screen and (max-width: variables.$large-breakpoint)
+{
+	.sidebar-cell
+	{
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		align-items: flex-start;
+
+	}
+}
+
+// Footer Cell
+.footer-cell
+{
+	grid-area: footer;
+
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+
+	border-top: solid;
+	background-color: variables.$main-color;
+	
+	i
+	{
+		color: white;
+	}
+}
+
+// End General Grid Cells
+// ***************************************************
+
+// ***************************************************
+// Mindless FlexBox Classes
+
+// display classes
+.flex
+{
+	display: flex;
+}
+
+.flex-row
+{
+	display: flex;
+	justify-content: space-around;
+}
+.column
+{
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+
+@media only screen and (max-width: variables.$small-breakpoint)
+{
+	.bp-col
+	{
+		flex-direction: column;
+	}
+}
+
+.wrap
+{
+	flex-wrap: wrap;
+}
+// end display classes
+
+// ************************
+
+// organize classes
+
+	// justify
+
+.justify-center
+{
+	justify-content: center;
+}
+
+.justify-space-between
+{
+	justify-content: space-between;
+}
+
+.justify-space-around
+{
+	justify-content: space-around;
+}
+
+.justify-start
+{
+	justify-content: flex-start;
+}
+
+.justify-self-end
+{
+	justify-self: flex-end;
+}
+
+	// align
+
+.alignc-space-between
+{
+	align-content: space-between;
+}
+
+.aligni-items-center
+{
+	align-items: center;
+}
+
+.align-self-end
+{
+	align-self: flex-end;
+}
+// end organize classes
+// End Mindless FlexBox Classes
+// ***************************************************
+
+
+// ***************************************************
+// Mindless Classes
+
+.border
+{
+	@include mixins.main-border();
+}
+
+.p0
+{
+	padding: 0;
+}
+
+.mt-5
+{
+	margin-top: 5rem;
+}
+
+.mb-5
+{
+	margin-bottom: 5rem;
+}
