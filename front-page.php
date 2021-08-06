@@ -9,7 +9,7 @@
 				</div>
 			</div>
 
-			<main class="main-content-cell align-items-center justify-space-between">
+			<main class="main-content-cell align-items-center justify-space-between alignc-center">
 				<div class="column">
 					<p>Welcome to my domain!</p>
 	

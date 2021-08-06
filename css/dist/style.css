@@ -16,7 +16,7 @@ img {
   margin-top: 10px;
   display: grid;
   grid-template-columns: 1rem minmax(5rem, 6rem) repeat(12, 1fr) 1rem;
-  grid-template-rows: 100px calc(100vh - 120px) 1rem minmax(4rem, max-content) auto 200px;
+  grid-template-rows: 100px calc(100vh - 140px) 1rem minmax(4rem, max-content) auto 200px;
   gap: 8px;
   grid-template-areas: ". nav nav nav nav nav nav nav nav nav nav nav nav nav ." ". hero hero hero hero hero hero hero hero hero hero hero hero hero ." ". . . . . . . . . . . . . . ." ". . content content content content content content content content content content content . ." ". . content content content content content content content content content content content . ." "footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer";
 }
@@ -28,7 +28,7 @@ img {
 }
 @media only screen and (max-width: 430px) {
   .grid-container-index {
-    grid-template-rows: 150px calc(100vh - 120px) 1rem minmax(4rem, max-content) auto 200px;
+    grid-template-rows: 150px calc(100vh - 170px) 1rem minmax(4rem, max-content) auto 200px;
   }
 }
 .grid-container-sidebar {
@@ -56,18 +56,18 @@ img {
   grid-template-columns: 1rem minmax(5rem, 6rem) repeat(12, 1fr) 1rem;
   grid-template-rows: 100px minmax(4rem, max-content) auto 200px;
   gap: 8px;
-  grid-template-areas: ". nav nav nav nav nav nav nav nav nav nav nav nav nav ." ". . . content content content content content content content content . . . ." ". . . content content content content content content content content . . . ." "footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer";
+  grid-template-areas: ". nav nav nav nav nav nav nav nav nav nav nav nav nav ." ". . . content content content content content content content content content . . ." ". . . content content content content content content content content content . . ." "footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer";
 }
 
 @media only screen and (max-width: 600px) {
   .grid-container-post {
-    grid-template-areas: ". nav nav nav nav nav nav nav nav nav nav nav nav nav ." ". . content content content content content content content content content . . . ." ". . content content content content content content content content content . . . ." "footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer";
+    grid-template-areas: ". nav nav nav nav nav nav nav nav nav nav nav nav nav ." ". content content content content content content content content content content content content content ." ". content content content content content content content content content content content content content ." "footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer";
   }
 }
 @media only screen and (max-width: 430px) {
   .grid-container-post {
     grid-template-rows: 150px minmax(4rem, max-content) auto 200px;
-    grid-template-areas: ". nav nav nav nav nav nav nav nav nav nav nav nav nav ." ". content content content content content content content content content content . . . ." ". content content content content content content content content content content . . . ." "footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer";
+    grid-template-areas: ". nav nav nav nav nav nav nav nav nav nav nav nav nav ." ". content content content content content content content content content content content content . ." ". content content content content content content content content content content content content . ." "footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer";
   }
 }
 .nav-cell {
@@ -160,7 +160,6 @@ img {
 @media only screen and (max-width: 430px) {
   .nav-items {
     position: absolute;
-    right: 1rem;
     top: 158px;
   }
 
@@ -175,15 +174,6 @@ img {
 .column-menu {
   flex-direction: column;
   flex-wrap: wrap;
-}
-
-.gallery {
-  display: flex;
-  flex-wrap: wrap;
-}
-.gallery img {
-  width: 20vw;
-  margin: 1rem;
 }
 
 .blog-preview {
@@ -202,13 +192,25 @@ img {
   font-size: 1rem;
 }
 .blog-preview .blog-data {
+  margin-top: 1rem;
   font-size: 0.8rem;
+}
+.blog-preview .blog-data li {
+  list-style: none;
+}
+.blog-preview img {
+  width: 25vw;
+  height: auto;
 }
 .blog-preview a {
   color: black;
 }
 .blog-preview h1 {
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.6rem;
+}
+
+.ex-size {
+  flex: 0 1 35vw;
 }
 
 @media only screen and (max-width: 600px) {
@@ -216,36 +218,30 @@ img {
     width: 45vw;
   }
 }
-.ex-size {
-  flex: 0 1 35vw;
+.blog-content p {
+  margin: 1rem 0;
 }
 
 .blog h1 {
   text-align: center;
   font-size: 3rem;
 }
-.blog .flex {
-  margin-top: 1rem;
-}
-.blog .comment {
-  width: 20rem;
-  margin-bottom: 2rem;
-  padding: 1rem;
-}
-.blog .column:nth-child(3) p {
-  margin: 1.2em 0;
-}
-.blog input {
-  height: 10rem;
-  width: 20rem;
-}
-.blog button {
-  background-color: #f0f;
-  width: 5rem;
-}
 
 .page img {
   margin: 1rem 0;
+}
+
+.page-numbers {
+  margin: 0.5rem;
+  color: black;
+}
+
+.current {
+  color: white;
+  background-color: black;
+  font-weight: bold;
+  padding: 2px;
+  border-radius: 2px;
 }
 
 /*
@@ -266,8 +262,11 @@ img {
 			// Side Bar Cell, Left
 			// Footer Cell
 
-	Page Components
+	Specific Page Components
 		./components/_page-components.scss
+			// Blog Previews
+			// Blog Content
+			// Pagination
 
 	FlexBox Classes
 		./components/_page-components.scss
@@ -297,8 +296,14 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin-top: 0.5rem;
 }
 
+@media only screen and (max-width: 430px) {
+  .hero-cell {
+    padding: 2rem;
+  }
+}
 .main-content-cell {
   grid-area: content;
   display: flex;
@@ -403,6 +408,10 @@ img {
 
 .alignc-space-between {
   align-content: space-between;
+}
+
+.alignc-center {
+  align-content: center;
 }
 
 .aligni-items-center {

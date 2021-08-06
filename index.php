@@ -21,7 +21,7 @@
 					</a>
 				</div>
 				<div class="flex justify-space-around wrap bp-col">
-					<div class="column ex-size justify-space-between">
+					<div class="flex column justify-space-between ex-size">
 						<div class="blog-excerpt">
 							<?php the_excerpt();?>
 							<a href="blog-post.html">Continue reading</a>
@@ -34,14 +34,14 @@
 						</div>
 					</div>
 					<div class="column">
-						<?php the_post_thumbnail('medium');?>
+						<?php the_post_thumbnail('full'); ?>
 					</div>
 				</div>
 			</div>
 
 			<?php }
 		?>
-		<div class="flex">
+		<div class="flex justify-center">
 			<?php echo paginate_links();?>
 		</div>
 

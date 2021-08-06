@@ -4,30 +4,8 @@
 // ***********************************************
 // Specific Page Components
 
-// For Groups Of Images
-.gallery
-{
-	display: flex;
-	flex-wrap: wrap;
-
-	img
-	{
-		width: 20vw;
-
-		margin: 1rem;
-	}
-}
-
-@media only screen and (max-width: variables.$large-breakpoint)
-{
-	.gallery img
-	{
-		// width: 35vw;
-	}
-}
-
 // Poor Development, please revisit
-// For Blog Post Excerpts
+// Blog Previews
 .blog-preview
 {
 	display: flex;
@@ -53,14 +31,22 @@
 	// The Data Div
 	.blog-data
 	{
+		margin-top: 1rem;
 		font-size: .8rem;
+
+		li
+		{
+			list-style: none;
+			// display: inline-block;
+		}
 	}
 
 	// Misc
-	// img
-	// {
-	// 	width: 25vw;
-	// }
+	img
+	{
+		width: 25vw;
+		height: auto;
+	}
 
 	a
 	{
@@ -68,8 +54,13 @@
 	}
 	h1
 	{
-		margin-bottom: .2rem;
+		margin-bottom: .6rem;
 	}
+}
+
+.ex-size
+{
+	flex: 0 1 35vw;
 }
 
 @media only screen and (max-width: variables.$large-breakpoint)
@@ -80,53 +71,73 @@
 	}
 }
 
-.ex-size
+// Blog Content
+.blog-content
 {
-	flex: 0 1 35vw;
+	p
+	{
+		margin: 1rem 0;
+	}
 }
 
 // Major Blog Container
-.blog
+
+.blog h1
 {
-	h1
-	{
-		text-align: center;
-		font-size: 3rem;
-	}
-
-	.flex
-	{
-		margin-top: 1rem;
-	}
-
-	.comment
-	{
-		width: 20rem;
-		margin-bottom: 2rem;
-		padding: 1rem;
-	}
-
-	.column:nth-child(3) p
-	{
-		margin: 1.2em 0;
-	}
-
-	input
-	{
-		height: 10rem;
-		width: 20rem;
-	}
-
-	button
-	{
-		background-color: #f0f;
-		width: 5rem;
-	}
+	text-align: center;
+	font-size: 3rem;
 }
+
+// Deprecate this later okay?
+
+// .blog
+// {
+
+// 	// .flex
+// 	// {
+// 	// 	margin-top: 1rem;
+// 	// }
+
+// 	.comment
+// 	{
+// 		width: 20rem;
+// 		margin-bottom: 2rem;
+// 		padding: 1rem;
+// 	}
+
+// 	input
+// 	{
+// 		height: 10rem;
+// 		width: 20rem;
+// 	}
+
+// 	button
+// 	{
+// 		background-color: #f0f;
+// 		width: 5rem;
+// 	}
+// }
 
 .page img
 {
 	margin: 1rem 0;
+}
+
+// Pagination
+.page-numbers
+{
+	margin: .5rem;
+	color: black;
+}
+
+.current
+{
+	color: white;
+	background-color: black;
+	font-weight: bold;
+	
+	padding: 2px;
+	border-radius: 2px;
 }
 
 // End Poor Development
