@@ -82,10 +82,18 @@
 
 // Major Blog Container
 
-.blog h1
+.blog
 {
-	text-align: center;
-	font-size: 3rem;
+	h1
+	{
+		text-align: center;
+		font-size: 3rem;
+	}
+
+	img
+	{
+		height: auto;
+	}
 }
 
 // Deprecate this later okay?
