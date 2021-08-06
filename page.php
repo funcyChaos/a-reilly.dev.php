@@ -8,7 +8,7 @@ while (have_posts())
 
 		<h1>&lt<?php the_title();?>&gt</h1>
 
-		<div class="blog-content">
+		<div class="blog-content" id="content">
 			<?php the_content();?>
 		</div>
 		

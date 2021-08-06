@@ -45,7 +45,7 @@
 // ***************************************************
 // Grid General Cells:
 
-// Hero Cell
+	// Hero Cell
 .hero-cell
 {
 	grid-area: hero;
@@ -80,7 +80,7 @@
 	}
 }
 
-// Main Content Cell
+	// Main Content Cell
 .main-content-cell
 {
 	grid-area: content;
@@ -108,7 +108,7 @@
 	}
 }
 
-// Side Bar Cell, Left
+	// Side Bar Cell, Left
 .sidebar-cell
 {
 	grid-area: lcell;
@@ -151,7 +151,7 @@
 	}
 }
 
-// Footer Cell
+	// Footer Cell
 .footer-cell
 {
 	grid-area: footer;
@@ -175,7 +175,7 @@
 // ***************************************************
 // Mindless FlexBox Classes
 
-// display classes
+	// display classes
 .flex
 {
 	display: flex;
@@ -204,13 +204,13 @@
 {
 	flex-wrap: wrap;
 }
-// end display classes
+	// end display classes
 
-// ************************
+	// ************************
 
-// organize classes
+	// organize classes
 
-	// justify
+		// justify
 
 .justify-center
 {
@@ -237,7 +237,7 @@
 	justify-self: flex-end;
 }
 
-	// align
+		// align
 
 .alignc-space-between
 {
@@ -258,7 +258,7 @@
 {
 	align-self: flex-end;
 }
-// end organize classes
+	// end organize classes
 // End Mindless FlexBox Classes
 // ***************************************************
 

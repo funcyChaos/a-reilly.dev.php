@@ -78,6 +78,10 @@
 	{
 		margin: 1rem 0;
 	}
+	img
+	{
+		align-self: center;
+	}
 }
 
 // Major Blog Container
@@ -126,9 +130,10 @@
 // 	}
 // }
 
-.page img
+.wp-her-img img
 {
-	margin: 1rem 0;
+	height: calc(100vh-120px);
+	width: 100px;
 }
 
 // Pagination

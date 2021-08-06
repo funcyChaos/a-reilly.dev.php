@@ -222,6 +222,9 @@ img {
 .blog-content p {
   margin: 1rem 0;
 }
+.blog-content img {
+  align-self: center;
+}
 
 .blog h1 {
   text-align: center;
@@ -231,8 +234,9 @@ img {
   height: auto;
 }
 
-.page img {
-  margin: 1rem 0;
+.wp-her-img img {
+  height: calc(100vh-120px);
+  width: 100px;
 }
 
 .page-numbers {
