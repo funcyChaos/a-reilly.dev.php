@@ -13,7 +13,7 @@
 	<body>
 		<div class="<?php if(is_front_page()) echo 'grid-container-index';
 		elseif(is_home()) echo 'grid-container-sidebar';
-		elseif(is_singular()) echo 'grid-container-post';
+		elseif(is_singular() or is_page()) echo 'grid-container-post';
 		?>">
 			<!-- NAV BAR -->
 			<nav class="nav-cell" id="nav-cell-change">
@@ -33,7 +33,7 @@
 							<a href="<?php echo site_url('/blog');?>" <?php if(get_post_type() == 'post') echo 'class="current-nav"';?>>&ltblog&gt</a>
 						</li>
 						<li>
-							<a href="page.html">&ltabout&gt</a>
+							<a href="<?php echo site_url('/about');?>" <?php if(is_page('about')) echo 'class="current-nav"';?>>&ltabout&gt</a>
 						</li>
 						<li>
 							<a href="#">&ltcontact&gt</a>
