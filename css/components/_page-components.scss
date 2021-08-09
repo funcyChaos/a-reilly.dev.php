@@ -88,6 +88,11 @@
 
 .blog
 {
+	a
+	{
+		color: black;
+	}
+
 	h1
 	{
 		text-align: center;
@@ -97,6 +102,11 @@
 	img
 	{
 		height: auto;
+	}
+
+	.comments-area
+	{
+		margin: 3rem 0;
 	}
 
 	.avatar

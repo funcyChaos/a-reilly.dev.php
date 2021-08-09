@@ -1,8 +1,8 @@
 
 			<div class="flex justify-space-between">
-				<p>author:<?php the_Author_posts_link();?></p>
-				<p>published:<?php the_time('d.m.Y');?></p>
-				<p>categorized:<?php echo get_the_category_list();?></p>
+				<p>author:<? the_Author_posts_link();?></p>
+				<p>published:<? the_time('d.m.Y');?></p>
+				<p>categorized:<? echo get_the_category_list();?></p>
 			</div>
 
 			<!-- **************************** -->

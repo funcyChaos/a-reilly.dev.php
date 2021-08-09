@@ -1,4 +1,4 @@
-<?php
+<?
 
 	function style_files()
 	{

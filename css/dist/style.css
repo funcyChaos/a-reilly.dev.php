@@ -62,13 +62,13 @@ img {
 
 @media only screen and (max-width: 600px) {
   .grid-container-post {
-    grid-template-areas: ". nav nav nav nav nav nav nav nav nav nav nav nav nav ." ". content content content content content content content content content content content content content ." ". content content content content content content content content content content content content content ." "footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer";
+    grid-template-areas: ". nav nav nav nav nav nav nav nav nav nav nav nav nav ." ". content content content content content content content content content content content content content ." "footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer";
   }
 }
 @media only screen and (max-width: 430px) {
   .grid-container-post {
     grid-template-rows: 150px minmax(4rem, max-content) auto 200px;
-    grid-template-areas: ". nav nav nav nav nav nav nav nav nav nav nav nav nav ." ". content content content content content content content content content content content content . ." ". content content content content content content content content content content content content . ." "footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer";
+    grid-template-areas: ". nav nav nav nav nav nav nav nav nav nav nav nav nav ." ". content content content content content content content content content content content content . ." "footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer";
   }
 }
 .nav-cell {
@@ -139,6 +139,7 @@ img {
 
   .nav-items {
     position: absolute;
+    z-index: 100;
     right: 1.7rem;
     top: 108px;
     padding: 8px;
@@ -226,12 +227,18 @@ img {
   align-self: center;
 }
 
+.blog a {
+  color: black;
+}
 .blog h1 {
   text-align: center;
   font-size: 3rem;
 }
 .blog img {
   height: auto;
+}
+.blog .comments-area {
+  margin: 3rem 0;
 }
 .blog .avatar {
   width: initial;

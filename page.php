@@ -1,4 +1,4 @@
-<?php get_header();
+<? get_header();
 
 while (have_posts())
 {
@@ -6,13 +6,22 @@ while (have_posts())
 
 	<main class="main-content-cell column blog">
 
-		<h1>&lt<?php the_title();?>&gt</h1>
+		<h1>&lt<? the_title();?>&gt</h1>
 
 		<div class="blog-content" id="content">
-			<?php the_content();?>
+			<? the_content();?>
 		</div>
 		
 	</main>
-	<?php }
+<? }?>
 
-get_footer();?>
+<script>
+if(document.getElementById('content').firstElementChild.classList == 'wp-block-image size-large')
+{
+	document.getElementById('content').firstElementChild.firstElementChild.style.height = 'calc(100vh - 200px)';
+	document.getElementById('content').firstElementChild.firstElementChild.style.width = 'auto';
+	document.getElementById('content').firstElementChild.style.textAlign = 'center'
+}
+</script>
+
+<? get_footer();?>

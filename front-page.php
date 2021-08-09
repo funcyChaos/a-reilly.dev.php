@@ -1,4 +1,4 @@
-<?php get_header();?>
+<? get_header();?>
 			
 			<!-- HERO IMAGE -->
 			<div class="hero-cell">
@@ -18,8 +18,8 @@
 					<p>Or maybe you’re just here to inspect my website code</p>
 				</div>
 				<div class="column">
-					<img src="<?php echo get_theme_file_uri('/images/hi-there.gif');?>" alt="hi there">
+					<img src="<? echo get_theme_file_uri('/images/hi-there.gif');?>" alt="hi there">
 				</div>
 			</main>
 
-<?php get_footer();?>
+<? get_footer();?>
