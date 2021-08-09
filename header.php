@@ -12,13 +12,19 @@
 	
 	<body>
 		<div class="<?php if(is_front_page()) echo 'grid-container-index';
-		elseif(is_home()) echo 'grid-container-sidebar';
+		elseif(is_home() or is_archive()) echo 'grid-container-sidebar';
 		elseif(is_singular() or is_page()) echo 'grid-container-post';
 		?>">
 			<!-- NAV BAR -->
 			<nav class="nav-cell" id="nav-cell-change">
 				<!-- <i class="fab fa-github-alt fa-2x"></i> -->
-				<img src="<?php echo get_theme_file_uri('/images/main-logo.png');?>" alt="ar.d logo">
+				
+				<?php
+					$custom_logo_id = get_theme_mod('custom_logo');
+					$custom_logo_url = wp_get_attachment_image_url($custom_logo_id, 'full');
+					echo '<img src="' . esc_url($custom_logo_url) . '" alt="">';
+				?>
+
 				<h2>a-reilly.dev</h2>
 				<div class="column nav-items" id="nav-id">
 					<form class="flex" action="search">
@@ -27,16 +33,16 @@
 					</form>
 					<ul>
 						<li>
-							<a href="<?php echo site_url();?>" <?php if(is_front_page()) echo 'class="current-nav"';?>>&lthome&gt</a>
+							<a href="<? echo site_url();?>" <? if(is_front_page()) echo 'class="current-nav"';?>>&lthome&gt</a>
 						</li>
 						<li>
-							<a href="<?php echo site_url('/blog');?>" <?php if(get_post_type() == 'post') echo 'class="current-nav"';?>>&ltblog&gt</a>
+							<a href="<? echo site_url('/blog');?>" <? if(get_post_type() == 'post') echo 'class="current-nav"';?>>&ltblog&gt</a>
 						</li>
 						<li>
-							<a href="<?php echo site_url('/about');?>" <?php if(is_page('about')) echo 'class="current-nav"';?>>&ltabout&gt</a>
+							<a href="<? echo site_url('/about');?>" <? if(is_page('about')) echo 'class="current-nav"';?>>&ltabout&gt</a>
 						</li>
 						<li>
-							<a href="#">&ltcontact&gt</a>
+							<a href="<? echo site_url('/contact');?>" <? if(is_page('contact')) echo 'class="current-nav"';?>>&ltcontact&gt</a>
 						</li>
 					</ul>
 				</div>

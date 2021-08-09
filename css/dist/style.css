@@ -55,9 +55,9 @@ img {
   margin-top: 10px;
   display: grid;
   grid-template-columns: 1rem minmax(5rem, 6rem) repeat(12, 1fr) 1rem;
-  grid-template-rows: 100px minmax(4rem, max-content) auto 200px;
+  grid-template-rows: 100px auto 200px;
   gap: 8px;
-  grid-template-areas: ". nav nav nav nav nav nav nav nav nav nav nav nav nav ." ". . . content content content content content content content content content . . ." ". . . content content content content content content content content content . . ." "footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer";
+  grid-template-areas: ". nav nav nav nav nav nav nav nav nav nav nav nav nav ." ". . . content content content content content content content content content . . ." "footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer";
 }
 
 @media only screen and (max-width: 600px) {
@@ -233,6 +233,10 @@ img {
 .blog img {
   height: auto;
 }
+.blog .avatar {
+  width: initial;
+  height: initial;
+}
 
 .wp-her-img img {
   height: calc(100vh-120px);
@@ -347,6 +351,10 @@ img {
   border-radius: 0.25rem;
 }
 .sidebar-cell a:hover {
+  background-color: #fff;
+  color: black;
+}
+.sidebar-cell .current-category {
   background-color: #fff;
   color: black;
 }

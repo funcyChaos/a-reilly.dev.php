@@ -1,12 +1,13 @@
 <?php
 
 	get_header();
-
+?>
+	<main class="main-content-cell column blog">
+<?php
 	while (have_posts())
 	{
 		the_post()?>
 
-		<main class="main-content-cell column blog">
 
 			<h1>&lt<?php the_title();?>&gt</h1>
 
@@ -21,7 +22,15 @@
 			</div>
 
 			
-		</main>
-	
-	<?php }
+			
+			<?php }
+
+if (comments_open() || get_comments_number())
+{
+	comments_template();
+}
+?>
+	</main>
+<?php
+
 	get_footer();?>

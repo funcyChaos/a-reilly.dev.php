@@ -1,8 +1,12 @@
 <?php get_header();?>
 
 	<div class="sidebar-cell" id="lcell">
-		<? foreach(get_categories() as $category) : ?>
-			<a href="<? echo esc_url(get_category_link($category->term_id));?>">&lt<? echo $category->name;?>&gt</a><?
+		<? 
+		$currentCategory = get_queried_object();
+		foreach(get_categories() as $category) : ?>
+			<a
+				<? if($currentCategory->term_id == $category->term_id)echo 'class="current-category"';?>
+				href="<? echo esc_url(get_category_link($category->term_id));?>">&lt<? echo $category->name;?>&gt</a><?
  		endforeach;?>
 	</div>
 
