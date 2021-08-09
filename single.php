@@ -1,9 +1,10 @@
 <? get_header();?>
 	<main class="main-content-cell column blog">
+
 <?
 	while (have_posts())
 	{
-		the_post()?>
+		the_post();?>
 
 
 			<h1>&lt<? the_title();?>&gt</h1>

@@ -38,8 +38,7 @@
 				</div>
 			</div>
 
-			<? }
-		?>
+			<? } ?>
 		<div class="flex justify-center">
 			<? echo paginate_links();?>
 		</div>

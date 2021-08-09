@@ -2,7 +2,7 @@
 
 while (have_posts())
 {
-	the_post()?>
+	the_post() ?>
 
 	<main class="main-content-cell column blog">
 
@@ -13,7 +13,7 @@ while (have_posts())
 		</div>
 		
 	</main>
-<? }?>
+<? } ?>
 
 <script>
 if(document.getElementById('content').firstElementChild.classList == 'wp-block-image size-large')
