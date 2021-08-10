@@ -1,10 +1,12 @@
-<? get_header();
+<? get_header();?>
 
+<main class="main-content-cell column blog">
+
+<?
 while (have_posts())
 {
 	the_post() ?>
 
-	<main class="main-content-cell column blog">
 
 		<h1>&lt<? the_title();?>&gt</h1>
 
@@ -12,8 +14,9 @@ while (have_posts())
 			<? the_content();?>
 		</div>
 		
-	</main>
-<? } ?>
+		<? } ?>
+		
+</main>
 
 <script>
 if(document.getElementById('content').firstElementChild.classList == 'wp-block-image size-large')
