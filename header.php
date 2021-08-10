@@ -13,12 +13,11 @@
 	<body>
 		<div class="<? if(is_front_page()) echo 'grid-container-index';
 		elseif(is_home() or is_archive()) echo 'grid-container-sidebar';
-		elseif(is_singular() or is_page()) echo 'grid-container-post';
+		elseif(is_singular() or is_page() or is_search()) echo 'grid-container-post';
 		?>">
 			<!-- NAV BAR -->
 			<nav class="nav-cell" id="nav-cell-change">
-				<!-- <i class="fab fa-github-alt fa-2x"></i> -->
-				
+
 				<?
 					$custom_logo_id = get_theme_mod('custom_logo');
 					$custom_logo_url = wp_get_attachment_image_url($custom_logo_id, 'full');
@@ -27,10 +26,14 @@
 
 				<h2>a-reilly.dev</h2>
 				<div class="column nav-items" id="nav-id">
-					<form class="flex" action="search">
+
+					<!-- <form class="flex" action="search">
 						<input class="nav-form" type="text">
 						<button>&ltsearch&gt</button>
-					</form>
+					</form> -->
+
+					<? get_search_form();?>
+
 					<ul>
 						<li>
 							<a href="<? echo site_url();?>" <? if(is_front_page()) echo 'class="current-nav"';?>>&lthome&gt</a>

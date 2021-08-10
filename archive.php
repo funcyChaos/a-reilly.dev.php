@@ -34,7 +34,6 @@
 							<p>author:<? the_Author_posts_link();?></p>
 							<p>published:<? the_time('d.m.Y');?></p>
 							<p>categorized:<? echo get_the_category_list();?></p>
-							<!-- <p>Tags:cars,driftcar,motorswap,race car</p> -->
 						</div>
 					</div>
 					<div class="column">
