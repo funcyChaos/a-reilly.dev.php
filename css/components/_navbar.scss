@@ -15,10 +15,15 @@
 	
 	background-color: variables.$main-color;
 	
-	img
+	.nav-brand
 	{
 		width: 3rem;
 		align-self: start;
+	}
+	.nav-brand:hover
+	{
+		background-color: initial;
+		color: white;
 	}
 
 	li
@@ -47,17 +52,19 @@
 		align-self: flex-end;
 	}
 
-	button
+	#searchsubmit
 	{
 		color: white;
 		background-color: black;
 
-		padding: 2px;
+		height: 1.5rem;
+		// padding: 2px;
 	}
 
-	input
+	#s
 	{
 		@include mixins.main-border();
+		height: 1.3rem;
 	}
 
 	a:hover

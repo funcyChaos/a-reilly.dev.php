@@ -17,7 +17,7 @@
 					<div class="flex column justify-space-between ex-size">
 						<div class="blog-excerpt">
 							<? the_excerpt();?>
-							<a href="blog-post.html">Continue reading</a>
+							<a href="<? the_permalink();?>">Continue reading</a>
 						</div>
 						<div class="blog-data">
 							<p>author:<? the_Author_posts_link();?></p>

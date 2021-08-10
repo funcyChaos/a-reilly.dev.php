@@ -21,16 +21,13 @@
 				<?
 					$custom_logo_id = get_theme_mod('custom_logo');
 					$custom_logo_url = wp_get_attachment_image_url($custom_logo_id, 'full');
-					echo '<img src="' . esc_url($custom_logo_url) . '" alt="">';
+					echo '<a href="' . site_url() . '" class="nav-brand">' . '<img src="' . esc_url($custom_logo_url) . '" alt=""></a>';
+					// theme_prefix_the_custom_logo();
 				?>
 
-				<h2>a-reilly.dev</h2>
-				<div class="column nav-items" id="nav-id">
+				<h2><a href="<? site_url();?>" class="nav-brand">a-reilly.dev</a></h2>
 
-					<!-- <form class="flex" action="search">
-						<input class="nav-form" type="text">
-						<button>&ltsearch&gt</button>
-					</form> -->
+				<div class="column nav-items" id="nav-id">
 
 					<? get_search_form();?>
 
@@ -39,7 +36,12 @@
 							<a href="<? echo site_url();?>" <? if(is_front_page()) echo 'class="current-nav"';?>>&lthome&gt</a>
 						</li>
 						<li>
-							<a href="<? echo site_url('/blog');?>" <? if(get_post_type() == 'post') echo 'class="current-nav"';?>>&ltblog&gt</a>
+							<a href="<? echo site_url('/blog');?>" <?
+								$class;
+								if(get_post_type() == 'post') $class = 'class="current-nav"';
+								if(is_search()) $class = '';
+								echo $class;?>
+							>&ltblog&gt</a>
 						</li>
 						<li>
 							<a href="<? echo site_url('/about');?>" <? if(is_page('about')) echo 'class="current-nav"';?>>&ltabout&gt</a>

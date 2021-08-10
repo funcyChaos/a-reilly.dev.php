@@ -81,9 +81,13 @@ img {
   padding: 0.5rem;
   background-color: #07265F;
 }
-.nav-cell img {
+.nav-cell .nav-brand {
   width: 3rem;
   align-self: start;
+}
+.nav-cell .nav-brand:hover {
+  background-color: initial;
+  color: white;
 }
 .nav-cell li {
   display: inline-block;
@@ -103,14 +107,15 @@ img {
   margin-bottom: 1.5rem;
   align-self: flex-end;
 }
-.nav-cell button {
+.nav-cell #searchsubmit {
   color: white;
   background-color: black;
-  padding: 2px;
+  height: 1.5rem;
 }
-.nav-cell input {
+.nav-cell #s {
   border: solid;
   border-radius: 0.2rem;
+  height: 1.3rem;
 }
 .nav-cell a:hover {
   background-color: #fff;
