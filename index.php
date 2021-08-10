@@ -1,7 +1,8 @@
 <? get_header();?>
 
 	<div class="sidebar-cell" id="lcell">
-		<? foreach(get_categories() as $category) : ?>
+		<?
+		foreach(get_categories() as $category) : ?>
 			<a href="<? echo esc_url(get_category_link($category->term_id));?>">&lt<? echo $category->name;?>&gt</a><?
  		endforeach;?>
 	</div>
