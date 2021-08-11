@@ -25,7 +25,7 @@
 					// theme_prefix_the_custom_logo();
 				?>
 
-				<h2><a href="<? site_url();?>" class="nav-brand">a-reilly.dev</a></h2>
+				<h2><a href="<? echo site_url();?>" class="nav-brand">a-reilly.dev</a></h2>
 
 				<div class="column nav-items" id="nav-id">
 
