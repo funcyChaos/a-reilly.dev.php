@@ -1,6 +1,7 @@
 <? get_header();?>
 
 	<div class="sidebar-cell" id="lcell">
+		<a href="<? echo site_url('/blog');?>" class="current-category">&ltall&gt</a>
 		<?
 		foreach(get_categories() as $category) : ?>
 			<a href="<? echo esc_url(get_category_link($category->term_id));?>">&lt<? echo $category->name;?>&gt</a><?
