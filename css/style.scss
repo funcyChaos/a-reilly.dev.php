@@ -11,6 +11,10 @@
 	* Settings
 		./components/_grid-layouts.scss
 
+	Font Families
+		./components/_grid-layouts.scss
+			// Font Families
+
 	Grid Layouts
 		./components/_grid-layouts.scss
 		./components/_grid-templates.scss
@@ -122,6 +126,12 @@
 	padding: .5rem;
 	@include mixins.main-border();
 	
+	li
+	{
+		list-style: none;
+
+		margin: .4rem 0;
+	}
 	
 	a
 	{
