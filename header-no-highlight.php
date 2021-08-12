@@ -13,7 +13,7 @@
 	<body>
 		<div class="<? if(is_front_page()) echo 'grid-container-index';
 		elseif(is_home() or is_archive()) echo 'grid-container-sidebar';
-		elseif(is_singular() or is_page() or is_search()) echo 'grid-container-post';
+		elseif(is_singular() or is_page() or is_search() or is_404()) echo 'grid-container-post';
 		?>">
 			<!-- NAV BAR -->
 			<nav class="nav-cell" id="nav-cell-change">
@@ -25,9 +25,9 @@
 					// theme_prefix_the_custom_logo();
 				?>
 
-				<h2><a href="<? echo site_url();?>" class="nav-brand"><? echo get_bloginfo('name');?></a></h2>
+				<h2><a href="<? echo site_url();?>" class="nav-brand">where-am-i</a></h2>
 
-				<div class="column nav-items" id="nav-id">
+				<div class="column nav-items no-highlight" id="nav-id">
 
 					<? get_search_form();?>
 

@@ -58,7 +58,6 @@
 		background-color: black;
 
 		height: 1.5rem;
-		// padding: 2px;
 	}
 
 	#s
@@ -154,4 +153,10 @@
 // display: flex;
 flex-direction: column;
 flex-wrap: wrap;
+}
+
+.no-highlight .current-menu-item a, .no-highlight .current_page_parent a
+{
+	background-color: initial;
+	color: white;
 }

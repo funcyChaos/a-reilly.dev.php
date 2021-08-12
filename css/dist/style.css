@@ -185,6 +185,11 @@ img {
   flex-wrap: wrap;
 }
 
+.no-highlight .current-menu-item a, .no-highlight .current_page_parent a {
+  background-color: initial;
+  color: white;
+}
+
 .blog-preview {
   display: flex;
   flex-direction: column;
