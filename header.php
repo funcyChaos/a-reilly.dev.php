@@ -36,7 +36,18 @@
 					'menu_class'=>''
 					));?>
 				</div>
-				<script>if (window.innerWidth < 900) document.getElementById('nav-id').classList.add('hide');</script>
+				<script>
+					if (window.innerWidth < 900) document.getElementById('nav-id').classList.add('hide');
+					// Add <> to each menu item :D
+					const menuItems = document.getElementById('menu-main-menu').getElementsByTagName('li');
+
+					for (let i = 0; i < menuItems.length; i++)
+					{
+						let htmlContent = menuItems[i].firstChild.innerHTML;
+						htmlContent = '&lt' + htmlContent + '&gt';
+						menuItems[i].firstChild.innerHTML = htmlContent;
+					}
+				</script>
 				
 				<span onclick="navToggle()" class="dropdown_">&ltmenu&gt</span>
 
