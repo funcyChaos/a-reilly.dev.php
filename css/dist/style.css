@@ -101,7 +101,7 @@ img {
   padding: 3px;
   border-radius: 0.25rem;
 }
-.nav-cell .current-nav {
+.nav-cell .current-menu-item a, .nav-cell .current_page_parent a {
   background-color: white;
   color: black;
 }
@@ -124,7 +124,7 @@ img {
   color: black;
 }
 
-.menu {
+.dropdown_ {
   display: none;
 }
 
@@ -140,7 +140,7 @@ img {
 }
 
 @media only screen and (max-width: 600px) {
-  .menu {
+  .dropdown_ {
     display: flex;
   }
 
