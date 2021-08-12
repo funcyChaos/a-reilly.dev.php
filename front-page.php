@@ -11,6 +11,7 @@
 
 			<main class="main-content-cell align-items-center justify-space-between alignc-center">
 				<div class="column">
+					
 					<p>Welcome to my domain!</p>
 	
 					<p>Here you can learn more about me and my different projects.</p>

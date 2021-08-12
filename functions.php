@@ -23,7 +23,8 @@
 		add_theme_support('post-thumbnails');
 
 		add_theme_support('title-tag');
-	
+
+		register_nav_menu('headerMenu','Header Menu');
 	}
 
 	add_action( 'after_setup_theme', 'theme_prefix_setup' );

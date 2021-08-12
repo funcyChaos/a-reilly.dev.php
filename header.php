@@ -31,28 +31,13 @@
 
 					<? get_search_form();?>
 
-					<ul>
-						<li>
-							<a href="<? echo site_url();?>" <? if(is_front_page()) echo 'class="current-nav"';?>>&lthome&gt</a>
-						</li>
-						<li>
-							<a href="<? echo site_url('/blog');?>" <?
-								$class;
-								if(get_post_type() == 'post') $class = 'class="current-nav"';
-								if(is_search()) $class = '';
-								echo $class;?>
-							>&ltblog&gt</a>
-						</li>
-						<li>
-							<a href="<? echo site_url('/about');?>" <? if(is_page('about')) echo 'class="current-nav"';?>>&ltabout&gt</a>
-						</li>
-						<li>
-							<a href="<? echo site_url('/contact');?>" <? if(is_page('contact')) echo 'class="current-nav"';?>>&ltcontact&gt</a>
-						</li>
-					</ul>
+					<?php wp_nav_menu(array('theme_location'=>'headerMenu',
+					'container'=>'',
+					'menu_class'=>''
+					));?>
 				</div>
 				<script>if (window.innerWidth < 900) document.getElementById('nav-id').classList.add('hide');</script>
 				
-				<span onclick="navToggle()" class="menu">&ltmenu&gt</span>
+				<span onclick="navToggle()" class="dropdown_">&ltmenu&gt</span>
 
 			</nav>
