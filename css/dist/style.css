@@ -235,13 +235,6 @@ img {
     width: 45vw;
   }
 }
-.blog-content p {
-  margin: 1rem 0;
-}
-.blog-content img {
-  align-self: center;
-}
-
 .blog a {
   color: black;
 }
@@ -254,6 +247,13 @@ img {
 }
 .blog .comments-area {
   margin: 3rem 0;
+}
+
+.blog-content p {
+  margin: 1rem 0;
+}
+.blog-content img {
+  align-self: center;
 }
 
 .comment-body {
@@ -328,7 +328,9 @@ img {
 	Specific Page Components
 		./components/_page-components.scss
 			// Blog Previews
+			// Major Blog Container
 			// Blog Content
+				// Comments
 			// Pagination
 
 	FlexBox Classes

@@ -5,6 +5,7 @@
 // Specific Page Components
 
 // Poor Development, please revisit
+
 // Blog Previews
 .blog-preview
 {
@@ -74,6 +75,34 @@
 		width: 45vw;
 	}
 }
+// End Blog Previews
+
+
+// Major Blog Container
+
+.blog
+{
+	a
+	{
+		color: black;
+	}
+	
+	h1
+	{
+		text-align: center;
+		font-size: 3rem;
+	}
+	
+	img
+	{
+		height: auto;
+	}
+	
+	.comments-area
+	{
+		margin: 3rem 0;
+	}	
+}
 
 // Blog Content
 .blog-content
@@ -88,35 +117,7 @@
 	}
 }
 
-// Major Blog Container
-
-.blog
-{
-	a
-	{
-		color: black;
-	}
-
-	h1
-	{
-		text-align: center;
-		font-size: 3rem;
-	}
-
-	img
-	{
-		height: auto;
-	}
-
-	.comments-area
-	{
-		margin: 3rem 0;
-	}
-
-	
-}
-
-// Comments
+	// Comments
 .comment-body
 {
 	display: flex;
@@ -158,20 +159,8 @@
 	display: flex;
 	flex-direction: column;
 }
-
-// @media (max-width: 930px)
-// {
-// 	.comment-body
-// 	{
-// 		width: 100%;
-// 	}
-// 	.comment-form-comment
-// 	{
-// 		width: 100%;
-// 	}
-// }
-
-// End Comments
+	// End Comments
+// End Blog Content
 
 .wp-her-img img
 {
