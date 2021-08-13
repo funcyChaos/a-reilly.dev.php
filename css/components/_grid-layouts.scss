@@ -118,7 +118,7 @@ img
 {
 	.grid-container-post
 	{
-		grid-template-rows: 150px minmax(4rem, max-content)  auto 200px;
+		grid-template-rows: 150px auto 200px;
 
 		grid-template-areas: grid-templates.$e-mobile-post;
 	}

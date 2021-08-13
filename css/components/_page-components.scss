@@ -113,6 +113,39 @@
 		margin: 3rem 0;
 	}
 
+	
+}
+
+// Comments
+.comment-body
+{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+	margin: 1rem 0;
+	padding: .3rem;
+	@include mixins.main-border();
+
+	.comment-author
+	{
+		flex: 0 1 50%;
+		// text-align: center;
+		// display: flex;
+		// flex-direction: column;
+	}
+
+	.comment-meta
+	{
+		flex: 0 0 50%;
+	}
+	
+	p
+	{
+		margin: .5rem 0;
+		flex: 0 0 100%;
+	}
+
 	.avatar
 	{
 		width: initial;
@@ -120,35 +153,25 @@
 	}
 }
 
-// Deprecate this later okay?
+.comment-form-comment
+{
+	display: flex;
+	flex-direction: column;
+}
 
-// .blog
+// @media (max-width: 930px)
 // {
-
-// 	// .flex
-// 	// {
-// 	// 	margin-top: 1rem;
-// 	// }
-
-// 	.comment
+// 	.comment-body
 // 	{
-// 		width: 20rem;
-// 		margin-bottom: 2rem;
-// 		padding: 1rem;
+// 		width: 100%;
 // 	}
-
-// 	input
+// 	.comment-form-comment
 // 	{
-// 		height: 10rem;
-// 		width: 20rem;
-// 	}
-
-// 	button
-// 	{
-// 		background-color: #f0f;
-// 		width: 5rem;
+// 		width: 100%;
 // 	}
 // }
+
+// End Comments
 
 .wp-her-img img
 {

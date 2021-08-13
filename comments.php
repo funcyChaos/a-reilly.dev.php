@@ -17,28 +17,28 @@
  * the visitor has not yet entered the password,
  * return early without loading the comments.
  */
-if ( post_password_required() ) {
+if (post_password_required()) {
 	return;
 }
 
-$twenty_twenty_one_comment_count = get_comments_number();
+$commentCount = get_comments_number();
 ?>
 
-<div id="comments" class="comments-area default-max-width <? echo get_option( 'show_avatars' ) ? 'show-avatars' : ''; ?>">
+<div id="comments" class="comments-area <? echo get_option('show_avatars') ? 'show-avatars' : ''; ?>">
 
 	<?
-	if ( have_comments() ) :
+	if (have_comments()) :
 		;
 		?>
 		<h2 class="comments-title">
-			<? if ( '1' === $twenty_twenty_one_comment_count ) : ?>
+			<? if ('1' === $commentCount) : ?>
 				<? esc_html_e( '1 comment', 'twentytwentyone' ); ?>
 			<? else : ?>
 				<?
 				printf(
 					/* translators: %s: Comment count number. */
-					esc_html( _nx( '%s comment', '%s comments', $twenty_twenty_one_comment_count, 'Comments title', 'twentytwentyone' ) ),
-					esc_html( number_format_i18n( $twenty_twenty_one_comment_count ) )
+					esc_html( _nx('%s comment', '%s comments', $commentCount, 'Comments title', 'twentytwentyone')),
+					esc_html( number_format_i18n($commentCount))
 				);
 				?>
 			<? endif; ?>
@@ -50,6 +50,7 @@ $twenty_twenty_one_comment_count = get_comments_number();
 				array(
 					'avatar_size' => 32,
 					'style'       => 'ol',
+					'reverse_top_level'=>true,
 					'short_ping'  => true,
 				)
 			);
@@ -75,16 +76,16 @@ $twenty_twenty_one_comment_count = get_comments_number();
 		// );
 		?>
 
-		<? if ( ! comments_open() ) : ?>
-			<p class="no-comments"><? esc_html_e( 'Comments are closed.', 'twentytwentyone' ); ?></p>
+		<? if(!comments_open()) : ?>
+			<p class="no-comments"><? esc_html_e('Comments are closed.', 'twentytwentyone'); ?></p>
 		<? endif; ?>
 	<? endif; ?>
 
 	<?
 	comment_form(
 		array(
-			'logged_in_as'       => null,
-			'title_reply'        => esc_html__( 'Leave a comment', 'twentytwentyone' ),
+			'logged_in_as' => null,
+			'title_reply' => esc_html__('Leave a comment'),
 			'title_reply_before' => '<h2 id="reply-title" class="comment-reply-title">',
 			'title_reply_after'  => '</h2>',
 		)

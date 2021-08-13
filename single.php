@@ -1,6 +1,6 @@
 <? get_header();?>
 
-	<main class="main-content-cell column blog">
+	<main class="main-content-cell blog">
 
 <?
 	while (have_posts())
