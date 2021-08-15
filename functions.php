@@ -39,4 +39,26 @@
 	
 	}
 
+	function brutal_post_types()
+	{
+		register_post_type('guide',array(
+			'taxonomies'=>array('category'),
+			'supports' => array('title', 'editor', 'excerpt'),
+			'rewrite' => array('slug' => 'guides'),
+			'has_archive' => true,
+			'public' => true,
+			'show_in_rest' => true,
+			'labels' => array(
+				'name' => 'Guides',
+				'add_new_item' => 'Add New Guide',
+				'edit_item' => 'Edit Guide',
+				'all_items' => 'All Guides',
+				'singular_name' => 'Guide'
+			),
+			'menu_icon' => 'dashicons-art'
+		));
+	}
+
+	add_action('init', 'brutal_post_types');
+
 ?>
