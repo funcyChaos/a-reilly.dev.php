@@ -1,4 +1,4 @@
-<? get_header('no-highlight');?>
+<? get_header();?>
 
 	<main class="main-content-cell column alignc-center blog">
 		<h1>&lt404-not-found&gt</h1>

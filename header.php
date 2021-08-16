@@ -22,7 +22,6 @@
 					$custom_logo_id = get_theme_mod('custom_logo');
 					$custom_logo_url = wp_get_attachment_image_url($custom_logo_id, 'full');
 					echo '<a href="' . site_url() . '" class="nav-brand">' . '<img src="' . esc_url($custom_logo_url) . '" alt=""></a>';
-					// theme_prefix_the_custom_logo();
 				?>
 
 				<h2><a href="<? echo site_url();?>" class="nav-brand"><? echo get_bloginfo('name');?></a></h2>
@@ -36,6 +35,7 @@
 					'menu_class'=>''
 					));?>
 				</div>
+				
 				<script>
 					if (window.innerWidth < 900) document.getElementById('nav-id').classList.add('hide');
 
@@ -64,9 +64,7 @@
 					<script>
 						for (let i = 0; i < menuItems.length; i++)
 						{
-							let htmlContent = menuItems[i].firstChild.innerHTML;
-	
-							if(htmlContent === 'blog') menuItems[i].classList.remove('current_page_parent');
+							menuItems[i].classList.remove('current_page_parent');
 						}
 					</script> <?
 				} ?>
