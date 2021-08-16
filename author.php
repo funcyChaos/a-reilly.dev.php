@@ -8,14 +8,12 @@
 		<script>
 			const authorItems = document.getElementById('lcell').getElementsByTagName('li');
 			const currentAuthor = '<? echo $currentAuthor;?>';
-			console.log(authorItems[0].firstChild.innerHTML);
-			console.log(currentAuthor);
 			
 			for(let i = 0; i < authorItems.length; i++)
 			{
 				let htmlContent = authorItems[i].firstChild.innerHTML;
 
-				if(authorItems[i].firstChild.innerHTML === currentAuthor) authorItems[i].classList.add('current-category');
+				if(authorItems[i].firstChild.innerHTML === currentAuthor) authorItems[i].classList.add('current-author');
 			}
 
 			for(let i = 0; i < authorItems.length; i++)
