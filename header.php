@@ -24,7 +24,9 @@
 					echo '<a href="' . site_url() . '" class="nav-brand">' . '<img src="' . esc_url($custom_logo_url) . '" alt=""></a>';
 				?>
 
-				<h2><a href="<? echo site_url();?>" class="nav-brand"><? echo get_bloginfo('name');?></a></h2>
+				<h2><a href="<? echo site_url();?>" class="nav-brand"><?
+				if(is_404()) echo 'who-am-i';
+				else echo get_bloginfo('name');?></a></h2>
 
 				<div class="column nav-items" id="nav-id">
 
