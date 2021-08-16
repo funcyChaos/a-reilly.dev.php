@@ -411,7 +411,7 @@ img {
   background-color: #fff;
   color: black;
 }
-.sidebar-cell .current-category a {
+.sidebar-cell .current-category a, .sidebar-cell .current-category {
   background-color: #fff;
   color: black;
 }
