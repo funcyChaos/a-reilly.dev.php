@@ -2,12 +2,11 @@
 
 	<div class="sidebar-cell" id="lcell">
 		<?
-		$currentAuthor = get_the_author();
 		wp_list_authors();?>
 
 		<script>
 			const authorItems = document.getElementById('lcell').getElementsByTagName('li');
-			const currentAuthor = '<? echo $currentAuthor;?>';
+			const currentAuthor = '<? echo get_the_author();?>';
 			
 			for(let i = 0; i < authorItems.length; i++)
 			{
