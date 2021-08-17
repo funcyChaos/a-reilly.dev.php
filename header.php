@@ -44,20 +44,6 @@
 					const menuItems = document.getElementById('menu-main-menu').getElementsByTagName('li');
 				</script>
 
-				<!-- Only hilight guides if your on a guide page -->
-				<?
-				if(get_post_type() == 'guide')
-				{ ?>
-					<script>
-						for (let i = 0; i < menuItems.length; i++)
-						{
-							let htmlContent = menuItems[i].firstChild.innerHTML;
-	
-							if(htmlContent === 'blog') menuItems[i].classList.remove('current_page_parent');
-						}
-					</script> <?
-				} ?>
-
 				<!-- Highlight Nothing if 404 -->
 				<?
 				if(is_404())
