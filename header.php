@@ -12,27 +12,26 @@
 	
 	<body>
 		<div class="<? if(is_front_page()) echo 'grid-container-index';
-		elseif(is_home() or is_archive()) echo 'grid-container-sidebar';
-		elseif(is_singular() or is_page() or is_search() or is_404()) echo 'grid-container-post';
-		?>">
+			elseif(is_home() or is_archive()) echo 'grid-container-sidebar';
+			elseif(is_singular() or is_page() or is_search() or is_404()) echo 'grid-container-post';
+			?>">
 			<!-- NAV BAR -->
 			<nav class="nav-cell" id="nav-cell-change">
 
 				<?
-					$custom_logo_id = get_theme_mod('custom_logo');
-					$custom_logo_url = wp_get_attachment_image_url($custom_logo_id, 'full');
-					echo '<a href="' . site_url() . '" class="nav-brand">' . '<img src="' . esc_url($custom_logo_url) . '" alt=""></a>';
+				echo '<a href="' . site_url() . '" class="nav-brand">' . '<img src="' . esc_url(wp_get_attachment_image_url(get_theme_mod('custom_logo'), 'full')) . '" alt=""></a>';
 				?>
 
 				<h2><a href="<? echo site_url();?>" class="nav-brand"><?
-				if(is_404()) echo 'who-am-i';
-				else echo get_bloginfo('name');?></a></h2>
+					if(is_404()) echo 'who-am-i';
+					else echo get_bloginfo('name');
+				?></a></h2>
 
 				<div class="column nav-items" id="nav-id">
 
 					<? get_search_form();?>
 
-					<?php wp_nav_menu(array('theme_location'=>'headerMenu',
+					<? wp_nav_menu(array('theme_location'=>'headerMenu',
 					'container'=>'',
 					'menu_class'=>''
 					));?>
