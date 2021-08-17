@@ -2,19 +2,19 @@
 
 <main class="main-content-cell column blog">
 
-<?
-while (have_posts())
-{
-	the_post() ?>
+	<?
+	while (have_posts())
+	{
+		the_post(); ?>
 
 
-	<h1>&lt<? the_title();?>&gt</h1>
+		<h1>&lt<? the_title();?>&gt</h1>
 
-	<div class="blog-content" id="content">
-		<? the_content();?>
-	</div>
-		
-<? } ?>
+		<div class="blog-content" id="content">
+			<? the_content();?>
+		</div>
+			
+	<? } ?>
 		
 </main>
 
