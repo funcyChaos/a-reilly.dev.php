@@ -37,10 +37,9 @@
 					));?>
 				</div>
 				
+				<!-- Add <> to each menu item :D -->
 				<script>
-					if (window.innerWidth < 900) document.getElementById('nav-id').classList.add('hide');
-
-					// Add <> to each menu item :D
+					if(window.innerWidth < 900) document.getElementById('nav-id').classList.add('hide');
 					const menuItems = document.getElementById('menu-main-menu').getElementsByTagName('li');
 				</script>
 
@@ -49,7 +48,7 @@
 				if(is_404())
 				{ ?>
 					<script>
-						for (let i = 0; i < menuItems.length; i++)
+						for(let i = 0; i < menuItems.length; i++)
 						{
 							menuItems[i].classList.remove('current_page_parent');
 						}
@@ -57,7 +56,7 @@
 				} ?>
 
 				<script>
-					for (let i = 0; i < menuItems.length; i++)
+					for(let i = 0; i < menuItems.length; i++)
 					{
 						let htmlContent = menuItems[i].firstChild.innerHTML;
 						htmlContent = '&lt' + htmlContent + '&gt';
