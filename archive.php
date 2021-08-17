@@ -1,7 +1,7 @@
 <? get_header();?>
 
 	<div class="sidebar-cell" id="lcell">
-	<a href="<? echo site_url('/blog');?>">&ltall&gt</a>
+		<a href="<? echo site_url('/blog');?>">&ltall&gt</a>
 		<? 
 		$currentCategory = get_queried_object();
 		foreach(get_categories() as $category) : ?>
@@ -9,7 +9,6 @@
 				<? if($currentCategory->term_id == $category->term_id)echo 'class="current-category"';?>
 				href="<? echo esc_url(get_category_link($category->term_id));?>">&lt<? echo $category->name;?>&gt</a><?
  		endforeach;?>
-		 
 	</div>
 
 	<main class="main-content-cell column justify-start p0">

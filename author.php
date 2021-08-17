@@ -1,7 +1,33 @@
 <? get_header();?>
 
 	<div class="sidebar-cell" id="lcell">
-		<? wp_list_authors();?>
+		<?
+		$currentAuthor = get_the_author();
+		wp_list_authors();?>
+
+		<script>
+			const authorItems = document.getElementById('lcell').getElementsByTagName('li');
+			const currentAuthor = '<? echo $currentAuthor;?>';
+			
+			for(let i = 0; i < authorItems.length; i++)
+			{
+				let htmlContent = authorItems[i].firstChild.innerHTML;
+
+				if(authorItems[i].firstChild.innerHTML === currentAuthor) authorItems[i].classList.add('current-author');
+			}
+
+			for(let i = 0; i < authorItems.length; i++)
+			{
+				let htmlContent = authorItems[i].firstChild.innerHTML;
+
+				htmlContent = '&lt' + htmlContent + '&gt';
+				
+				authorItems[i].firstChild.innerHTML = htmlContent;
+			}
+
+
+		</script>
+
 	</div>
 
 	<main class="main-content-cell column justify-start p0">
