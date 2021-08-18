@@ -39,7 +39,9 @@
 				
 				<!-- Add <> to each menu item :D -->
 				<script>
-					if(window.innerWidth < 900) document.getElementById('nav-id').classList.add('hide');
+					const largeBreakpoint = 800;
+
+					if(window.innerWidth < largeBreakpoint) document.getElementById('nav-id').classList.add('hide');
 					const menuItems = document.getElementById('menu-main-menu').getElementsByTagName('li');
 				</script>
 
