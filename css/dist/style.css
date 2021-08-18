@@ -160,8 +160,7 @@ img {
   .nav-items li {
     margin: 10px;
   }
-
-  input {
+  .nav-items input {
     width: 4rem;
   }
 }
