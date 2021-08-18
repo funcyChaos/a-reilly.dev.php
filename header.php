@@ -37,7 +37,7 @@
 					));?>
 				</div>
 				
-				<!-- Add <> to each menu item :D -->
+				<!-- Javascript Setup -->
 				<script>
 					// Set largeBreakpoint to $large-breakpoint from our SASS _variables
 					const largeBreakpoint = getComputedStyle(document.body).getPropertyValue('--large-breakpoint').slice(0,4);
