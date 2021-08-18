@@ -5,7 +5,7 @@
 
 // Universal Columns Variable
 
-$grid-columns: 1rem 7rem repeat(12, 1fr) 1rem;
+$grid-columns: 1rem minmax(12rem, max-content) repeat(12, 1fr) 1rem;
 
 // Index Page Layout w/ Hero
 

@@ -17,7 +17,7 @@ img {
 .grid-container-index {
   margin-top: 10px;
   display: grid;
-  grid-template-columns: 1rem 7rem repeat(12, 1fr) 1rem;
+  grid-template-columns: 1rem minmax(12rem, max-content) repeat(12, 1fr) 1rem;
   grid-template-rows: 100px calc(100vh - 140px) 1rem minmax(4rem, max-content) auto 200px;
   gap: 8px;
   grid-template-areas: ". nav nav nav nav nav nav nav nav nav nav nav nav nav ." ". hero hero hero hero hero hero hero hero hero hero hero hero hero ." ". . . . . . . . . . . . . . ." ". . content content content content content content content content content content content . ." ". . content content content content content content content content content content content . ." "footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer";
@@ -36,10 +36,10 @@ img {
 .grid-container-sidebar {
   margin-top: 10px;
   display: grid;
-  grid-template-columns: 1rem 7rem repeat(12, 1fr) 1rem;
+  grid-template-columns: 1rem minmax(12rem, max-content) repeat(12, 1fr) 1rem;
   grid-template-rows: 100px minmax(4rem, max-content) auto 200px;
   gap: 8px;
-  grid-template-areas: ". nav nav nav nav nav nav nav nav nav nav nav nav nav ." ". lcell lcell . content content content content content content content content content . ." ". lcell lcell . content content content content content content content content content . ." "footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer";
+  grid-template-areas: ". nav nav nav nav nav nav nav nav nav nav nav nav nav ." ". lcell . content content content content content content content content content content . ." ". lcell . content content content content content content content content content content . ." "footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer";
 }
 
 @media only screen and (max-width: 800px) {
@@ -55,7 +55,7 @@ img {
 .grid-container-post {
   margin-top: 10px;
   display: grid;
-  grid-template-columns: 1rem 7rem repeat(12, 1fr) 1rem;
+  grid-template-columns: 1rem minmax(12rem, max-content) repeat(12, 1fr) 1rem;
   grid-template-rows: 100px auto 200px;
   gap: 8px;
   grid-template-areas: ". nav nav nav nav nav nav nav nav nav nav nav nav nav ." ". . . content content content content content content content content content . . ." "footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer";
