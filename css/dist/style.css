@@ -44,7 +44,7 @@ img {
 
 @media only screen and (max-width: 800px) {
   .grid-container-sidebar {
-    grid-template-areas: ". nav nav nav nav nav nav nav nav nav nav nav nav nav ." ". lcell lcell lcell lcell lcell lcell lcell lcell lcell lcell lcell lcell lcell ." ". content content content content content content content content content content content content content ." "footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer";
+    grid-template-areas: ". nav nav nav nav nav ." ". lcell lcell lcell lcell lcell ." ". content content content content content ." "footer footer footer footer footer footer footer";
   }
 }
 @media only screen and (max-width: 430px) {
@@ -63,13 +63,13 @@ img {
 
 @media only screen and (max-width: 800px) {
   .grid-container-post {
-    grid-template-areas: ". nav nav nav nav nav nav nav nav nav nav nav nav nav ." ". content content content content content content content content content content content content content ." "footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer";
+    grid-template-areas: ". nav nav nav nav nav ." ". content content content content . ." "footer footer footer footer footer footer footer";
   }
 }
 @media only screen and (max-width: 430px) {
   .grid-container-post {
     grid-template-rows: 150px auto 200px;
-    grid-template-areas: ". nav nav nav nav nav nav nav nav nav nav nav nav nav ." ". content content content content content content content content content content content content . ." "footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer";
+    grid-template-areas: ". nav nav nav nav nav ." ". content content content content content ." "footer footer footer footer footer footer footer";
   }
 }
 .nav-cell {
@@ -160,8 +160,7 @@ img {
   .nav-items li {
     margin: 10px;
   }
-
-  input {
+  .nav-items input {
     width: 4rem;
   }
 }

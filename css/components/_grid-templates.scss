@@ -37,10 +37,10 @@ $sidebar:
 ;
 
 $mobile-sidebar:
-  ". nav nav nav nav nav nav nav nav nav nav nav nav nav ."
-	". lcell lcell lcell lcell lcell lcell lcell lcell lcell lcell lcell lcell lcell ."
-	". content content content content content content content content content content content content content ."
-	"footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer"
+  ". nav nav nav nav nav ."
+	". lcell lcell lcell lcell lcell ."
+	". content content content content content ."
+	"footer footer footer footer footer footer footer"
 ;
 
 // **************************************************************************************************************
@@ -53,13 +53,13 @@ $post:
 ;
 
 $mobile-post:
-  ". nav nav nav nav nav nav nav nav nav nav nav nav nav ."
-	". content content content content content content content content content content content content content ."
-	"footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer"
+	". nav nav nav nav nav ."
+	". content content content content . ."
+	"footer footer footer footer footer footer footer"
 ;
 
 $e-mobile-post:
-	". nav nav nav nav nav nav nav nav nav nav nav nav nav ."
-	". content content content content content content content content content content content content . ."
-	"footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer"
+	". nav nav nav nav nav ."
+	". content content content content content ."
+	"footer footer footer footer footer footer footer"
 ;
