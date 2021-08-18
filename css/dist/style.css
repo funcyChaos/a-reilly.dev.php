@@ -69,7 +69,7 @@ img {
 @media only screen and (max-width: 430px) {
   .grid-container-post {
     grid-template-rows: 150px auto 200px;
-    grid-template-areas: ". nav nav nav nav nav nav nav nav nav nav nav nav nav ." ". content content content content content content content content content content content content . ." "footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer";
+    grid-template-areas: ". nav nav nav nav nav nav nav nav nav nav nav nav nav ." ". content content content content content content content content content content content content content ." "footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer";
   }
 }
 .nav-cell {
@@ -252,6 +252,15 @@ img {
 }
 .blog-content img {
   align-self: center;
+}
+
+@media (max-width: 430px) {
+  .blog h1 {
+    font-size: initial;
+  }
+}
+.comments-area {
+  width: 100%;
 }
 
 .comment-body {
