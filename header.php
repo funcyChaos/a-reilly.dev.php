@@ -39,9 +39,13 @@
 				
 				<!-- Add <> to each menu item :D -->
 				<script>
-					const largeBreakpoint = 800;
+					// Set largeBreakpoint to $large-breakpoint from our SASS _variables
+					const largeBreakpoint = getComputedStyle(document.body).getPropertyValue('--large-breakpoint').slice(0,4);
 
+					// Make sure that hide is set correctly when the page loads
 					if(window.innerWidth < largeBreakpoint) document.getElementById('nav-id').classList.add('hide');
+
+					// Assign all of the menu items to an array
 					const menuItems = document.getElementById('menu-main-menu').getElementsByTagName('li');
 				</script>
 

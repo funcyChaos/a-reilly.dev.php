@@ -1,0 +1,26 @@
+@use '../src/variables';
+
+// Font Families
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
+
+// Initial Settings
+*
+{
+	margin: 0;
+	padding: 0;
+	font-family: 'Courier Prime', monospace;
+}
+
+img
+{
+	width: 100%;
+	height: auto;
+}
+
+
+// Global Variables
+	// Make SASS variables available to JavaScript
+:root
+{
+	--large-breakpoint: #{variables.$large-breakpoint};
+}

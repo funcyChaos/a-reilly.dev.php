@@ -1,9 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap");
-:export {
-  largeBreakpoint: 800px;
-  smallBreakpoint: 430px;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -13,6 +8,10 @@
 img {
   width: 100%;
   height: auto;
+}
+
+:root {
+  --large-breakpoint: 800px;
 }
 
 .grid-container-index {
@@ -304,46 +303,55 @@ img {
 }
 
 /*
-	Table of Contents:
 
-	Initial Settings
-		./components/_grid-layouts.scss
+Table of Contents:
 
-	Font Families
-		./components/_grid-layouts.scss
-			// Font Families
+Initial Settings
+./components/_initial-settings.scss
+	// Font Families
+	// Initial Settings
+	// Global Variables
 
-	Grid Layouts
-		./components/_grid-layouts.scss
-		./components/_grid-templates.scss
+Grid Layouts
+./components/_grid-layouts.scss
+	// Universal Columns Variable
+	// Index Page Layout w/ Hero
+	// Page Layout w/ Sidebar
+	// Post Layout w/ No Sidebar
 
-	Grid Cells
-		./components/_navbar.scss
-		// Grid General Cells
-			// Hero Cell
-			// Main Content Cell
-			// Side Bar Cell, Left
-			// Footer Cell
+./components/_grid-templates.scss
+	// Index Page Templates w/ Hero
+	// Page Templates w/ Sidebar
+	// Page Templates w/ No Sidebar
 
-	Specific Page Components
-		./components/_page-components.scss
-			// Blog Previews
-			// Major Blog Container
-			// Blog Content
-				// Comments
-			// Pagination
+Grid Cells
+./components/_navbar.scss
+	// Grid General Cells
+	// Hero Cell
+	// Main Content Cell
+	// Side Bar Cell, Left
+	// Footer Cell
 
-	FlexBox Classes
-		./components/_page-components.scss
-		// Mindless FlexBox Classes
-			display classes
-			organize classes
+Specific Page Components
+./components/_page-components.scss
+	// Blog Previews
+	// Major Blog Container
+	// Blog Content
+	// Comments
+	// Pagination
 
-	Variables(Colors, Breakpoints, etc)
-		./src/_variables.scss
+FlexBox Classes
+./components/_page-components.scss
+	// Mindless FlexBox Classes
+		// display classes
+		// organize classes
 
-	Mixins
-		./src/_mixins.scss
+Variables(Colors, Breakpoints, etc)
+./src/_variables.scss
+
+Mixins
+./src/_mixins.scss
+
 */
 .hero-cell {
   grid-area: hero;

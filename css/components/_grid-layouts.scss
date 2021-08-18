@@ -1,30 +1,13 @@
 @use 'grid-templates';
 @use '../src/variables';
 
-// Font Families
-@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
-
-// Initial Settings
-*
-{
-	margin: 0;
-	padding: 0;
-	font-family: 'Courier Prime', monospace;
-}
-
-img
-{
-	width: 100%;
-	height: auto;
-}
-
 // **************************************************************************************************************
 
-// General Grid Variables
+// Universal Columns Variable
 
 $grid-columns: 1rem minmax(5rem, 7rem) repeat(12, 1fr) 1rem;
 
-// Index Page Template w/ Hero
+// Index Page Layout w/ Hero
 
 .grid-container-index
 {
@@ -58,7 +41,7 @@ $grid-columns: 1rem minmax(5rem, 7rem) repeat(12, 1fr) 1rem;
 }
 
 // **************************************************************************************************************
-// Page Template w/ Sidebar
+// Page Layout w/ Sidebar
 
 .grid-container-sidebar
 {
@@ -94,7 +77,7 @@ $grid-columns: 1rem minmax(5rem, 7rem) repeat(12, 1fr) 1rem;
 }
 
 // **************************************************************************************************************
-// Post Template w/ No Sidebar
+// Post Layout w/ No Sidebar
 
 .grid-container-post
 {
