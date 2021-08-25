@@ -51,7 +51,7 @@
 
 					// const menuHeight = menuItems.length * 60 + 'px';
 
-					const menuHeight = menuItems[0].offsetParent.offsetTop + menuItems[menuItems.length-1].offsetHeight + menuItems[menuItems.length-1].offsetTop + 'px';
+					const menuHeight = menuItems[0].offsetParent.offsetTop + menuItems[menuItems.length-1].offsetHeight + menuItems[menuItems.length-1].offsetTop - 50 + 'px';
 
 					console.log(menuHeight);
 

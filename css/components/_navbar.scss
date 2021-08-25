@@ -107,10 +107,11 @@
 		right: 1.7rem;
 		top: 108px;
 		
-		transition-duration: 1s;
+		transition-duration: .4s;
 
 		height: 0;
 		opacity: 0;
+		overflow: hidden;
 
 
 		padding: 8px;
