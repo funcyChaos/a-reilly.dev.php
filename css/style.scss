@@ -1,57 +1,67 @@
-@use 'components/grid-layouts';
-@use 'components/navbar';
+/*
+
+Table of Contents:
+
+Initial Settings
+./components/_initial-settings.scss
+	// Font Families
+	// Initial Settings
+	// Global Variables
+
+Grid Layouts
+./components/_grid-layouts.scss
+	// Universal Columns Variable
+	// Index Page Layout w/ Hero
+	// Page Layout w/ Sidebar
+	// Post Layout w/ No Sidebar
+
+./components/_grid-templates.scss
+	// Index Page Templates w/ Hero
+	// Page Templates w/ Sidebar
+	// Page Templates w/ No Sidebar
+
+Grid Cells
+./components/_navbar.scss
+	// Grid General Cells
+	// Hero Cell
+	// Main Content Cell
+	// Side Bar Cell, Left
+	// Footer Cell
+
+Specific Page Components
+./components/_page-components.scss
+	// Blog Previews
+	// Major Blog Container
+	// Blog Content
+	// Comments
+	// Pagination
+
+FlexBox Classes
+./components/_page-components.scss
+	// Mindless FlexBox Classes
+		// display classes
+		// organize classes
+
+Variables(Colors, Breakpoints, etc)
+./src/_variables.scss
+
+Mixins
+./src/_mixins.scss
+
+*/
+
+@use './components/initial_settings';
+@use './components/grid-layouts';
+@use './components/navbar';
 @use './components/page-components';
 
-@use 'src/variables';
-@use 'src/mixins.scss';
-
-/*
-	Table of Contents:
-
-	Initial Settings
-		./components/_grid-layouts.scss
-
-	Font Families
-		./components/_grid-layouts.scss
-			// Font Families
-
-	Grid Layouts
-		./components/_grid-layouts.scss
-		./components/_grid-templates.scss
-
-	Grid Cells
-		./components/_navbar.scss
-		// Grid General Cells
-			// Hero Cell
-			// Main Content Cell
-			// Side Bar Cell, Left
-			// Footer Cell
-
-	Specific Page Components
-		./components/_page-components.scss
-			// Blog Previews
-			// Major Blog Container
-			// Blog Content
-				// Comments
-			// Pagination
-
-	FlexBox Classes
-		./components/_page-components.scss
-		// Mindless FlexBox Classes
-			display classes
-			organize classes
-
-	Variables(Colors, Breakpoints, etc)
-		./src/_variables.scss
-
-	Mixins
-		./src/_mixins.scss
-*/
+@use './src/variables';
+@use './src/mixins.scss';
 
 // ***************************************************
 // Grid General Cells:
 
-	// Hero Cell
+// Hero Cell
 .hero-cell
 {
 	grid-area: hero;

@@ -12,59 +12,63 @@
 	
 	<body>
 		<div class="<? if(is_front_page()) echo 'grid-container-index';
-		elseif(is_home() or is_archive()) echo 'grid-container-sidebar';
-		elseif(is_singular() or is_page() or is_search() or is_404()) echo 'grid-container-post';
-		?>">
+			elseif(is_home() or is_archive()) echo 'grid-container-sidebar';
+			elseif(is_singular() or is_page() or is_search() or is_404()) echo 'grid-container-post';
+			?>">
 			<!-- NAV BAR -->
 			<nav class="nav-cell" id="nav-cell-change">
 
 				<?
-					$custom_logo_id = get_theme_mod('custom_logo');
-					$custom_logo_url = wp_get_attachment_image_url($custom_logo_id, 'full');
-					echo '<a href="' . site_url() . '" class="nav-brand">' . '<img src="' . esc_url($custom_logo_url) . '" alt=""></a>';
+				echo '<a href="' . site_url() . '" class="nav-brand">' . '<img src="' . esc_url(wp_get_attachment_image_url(get_theme_mod('custom_logo'), 'full')) . '" alt=""></a>';
 				?>
 
 				<h2><a href="<? echo site_url();?>" class="nav-brand"><?
-				if(is_404()) echo 'who-am-i';
-				else echo get_bloginfo('name');?></a></h2>
+					if(is_404()) echo 'who-am-i';
+					else echo get_bloginfo('name');
+				?></a></h2>
 
 				<div class="column nav-items" id="nav-id">
 
 					<? get_search_form();?>
 
-					<?php wp_nav_menu(array('theme_location'=>'headerMenu',
+					<? wp_nav_menu(array('theme_location'=>'headerMenu',
 					'container'=>'',
 					'menu_class'=>''
 					));?>
 				</div>
 				
+				<!-- Javascript Setup -->
 				<script>
-					if (window.innerWidth < 900) document.getElementById('nav-id').classList.add('hide');
+					// Variables
+						// Set largeBreakpoint to $large-breakpoint from our SASS _variables
+						const largeBreakpoint = getComputedStyle(document.body).getPropertyValue('--large-breakpoint').slice(0,3);
 
-					// Add <> to each menu item :D
-					const menuItems = document.getElementById('menu-main-menu').getElementsByTagName('li');
+						// Set navBar for easy access
+						const navBar = document.getElementById('nav-id');
+						
+						// Assign all of the menu items to an array
+						const menuItems = document.getElementById('menu-main-menu').getElementsByTagName('li');
+
+						// Declare dropdown menu height
+						let menuHeight = document.getElementById('nav-id').clientHeight + 'px';
+
+						// Set menu to hide
+						let isHidden = true;
+					// End Variables
+					
+					// Make sure that hide is set correctly when the page loads
+					if(window.innerWidth < largeBreakpoint)
+					{
+						navBar.style.height = 0;
+					}
 				</script>
-
-				<!-- Only hilight guides if your on a guide page -->
-				<?
-				if(get_post_type() == 'guide')
-				{ ?>
-					<script>
-						for (let i = 0; i < menuItems.length; i++)
-						{
-							let htmlContent = menuItems[i].firstChild.innerHTML;
-	
-							if(htmlContent === 'blog') menuItems[i].classList.remove('current_page_parent');
-						}
-					</script> <?
-				} ?>
 
 				<!-- Highlight Nothing if 404 -->
 				<?
 				if(is_404())
 				{ ?>
 					<script>
-						for (let i = 0; i < menuItems.length; i++)
+						for(let i = 0; i < menuItems.length; i++)
 						{
 							menuItems[i].classList.remove('current_page_parent');
 						}
@@ -72,7 +76,7 @@
 				} ?>
 
 				<script>
-					for (let i = 0; i < menuItems.length; i++)
+					for(let i = 0; i < menuItems.length; i++)
 					{
 						let htmlContent = menuItems[i].firstChild.innerHTML;
 						htmlContent = '&lt' + htmlContent + '&gt';

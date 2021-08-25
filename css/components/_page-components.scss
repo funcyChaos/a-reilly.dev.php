@@ -117,7 +117,20 @@
 	}
 }
 
+@media (max-width: variables.$small-breakpoint)
+{
+	.blog h1
+	{
+		font-size: initial;
+	}
+}
+
 	// Comments
+.comments-area
+{
+	width: 100%;
+}
+
 .comment-body
 {
 	display: flex;
@@ -131,9 +144,6 @@
 	.comment-author
 	{
 		flex: 0 1 50%;
-		// text-align: center;
-		// display: flex;
-		// flex-direction: column;
 	}
 
 	.comment-meta

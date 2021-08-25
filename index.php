@@ -10,7 +10,7 @@
 
 	<main class="main-content-cell column justify-content-center">
 
-	<?
+		<?
 		while (have_posts())
 		{
 			the_post();?>
@@ -39,7 +39,8 @@
 				</div>
 			</div>
 
-			<? } ?>
+		<? } ?>
+
 		<div class="flex justify-center">
 			<? echo paginate_links();?>
 		</div>

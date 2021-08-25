@@ -1,13 +1,11 @@
 <? get_header();?>
 
 	<div class="sidebar-cell" id="lcell">
-		<?
-		$currentAuthor = get_the_author();
-		wp_list_authors();?>
+		<? wp_list_authors();?>
 
 		<script>
 			const authorItems = document.getElementById('lcell').getElementsByTagName('li');
-			const currentAuthor = '<? echo $currentAuthor;?>';
+			const currentAuthor = '<? echo get_the_author();?>';
 			
 			for(let i = 0; i < authorItems.length; i++)
 			{
@@ -32,7 +30,7 @@
 
 	<main class="main-content-cell column justify-start p0">
 
-	<?
+		<?
 		while (have_posts())
 		{
 			the_post();?>
@@ -61,7 +59,8 @@
 				</div>
 			</div>
 
-			<? } ?>
+		<? } ?>
+		
 		<div class="flex justify-center">
 			<? echo paginate_links();?>
 		</div>

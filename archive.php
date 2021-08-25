@@ -7,13 +7,15 @@
 		foreach(get_categories() as $category) : ?>
 			<a
 				<? if($currentCategory->term_id == $category->term_id)echo 'class="current-category"';?>
-				href="<? echo esc_url(get_category_link($category->term_id));?>">&lt<? echo $category->name;?>&gt</a><?
+				href="<? echo esc_url(get_category_link($category->term_id));?>">
+					&lt<? echo $category->name;?>&gt
+			</a><?
  		endforeach;?>
 	</div>
 
 	<main class="main-content-cell column justify-start p0">
 
-	<?
+		<?
 		while (have_posts())
 		{
 			the_post();?>
@@ -42,7 +44,8 @@
 				</div>
 			</div>
 
-			<? } ?>
+		<? } ?>
+
 		<div class="flex justify-center">
 			<? echo paginate_links();?>
 		</div>
