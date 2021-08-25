@@ -11,7 +11,7 @@ img {
 }
 
 :root {
-  --large-breakpoint: 800px;
+  --large-breakpoint: 840px;
 }
 
 .grid-container-index {
@@ -23,7 +23,7 @@ img {
   grid-template-areas: ". nav nav nav nav nav nav nav nav nav nav nav nav nav ." ". hero hero hero hero hero hero hero hero hero hero hero hero hero ." ". . . . . . . . . . . . . . ." ". . content content content content content content content content content content content . ." ". . content content content content content content content content content content content . ." "footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer";
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 840px) {
   .grid-container-index {
     grid-template-areas: ". nav nav nav nav nav nav nav nav nav nav nav nav nav ." ". hero hero hero hero hero hero hero hero hero hero hero hero hero ." ". . . . . . . . . . . . . . ." ". content content content content content content content content content content content content content ." ". content content content content content content content content content content content content content ." "footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer";
   }
@@ -42,7 +42,7 @@ img {
   grid-template-areas: ". nav nav nav nav nav nav nav nav nav nav nav nav nav ." ". lcell . content content content content content content content content content content . ." ". lcell . content content content content content content content content content content . ." "footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer";
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 840px) {
   .grid-container-sidebar {
     grid-template-areas: ". nav nav nav nav nav nav nav nav nav nav nav nav nav ." ". lcell lcell lcell lcell lcell lcell lcell lcell lcell lcell lcell lcell lcell ." ". content content content content content content content content content content content content content ." "footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer";
   }
@@ -61,7 +61,7 @@ img {
   grid-template-areas: ". nav nav nav nav nav nav nav nav nav nav nav nav nav ." ". . . content content content content content content content content content . . ." "footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer";
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 840px) {
   .grid-container-post {
     grid-template-areas: ". nav nav nav nav nav nav nav nav nav nav nav nav nav ." ". content content content content content content content content content content content content content ." "footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer";
   }
@@ -138,7 +138,7 @@ img {
   align-self: flex-end;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 840px) {
   .dropdown_ {
     display: flex;
   }
@@ -227,7 +227,7 @@ img {
   flex: 0 1 35vw;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 840px) {
   .blog-preview img {
     width: 45vw;
   }
@@ -431,7 +431,7 @@ Mixins
   color: black;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 840px) {
   .sidebar-cell {
     flex-direction: row;
     flex-wrap: wrap;

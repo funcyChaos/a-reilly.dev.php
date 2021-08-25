@@ -39,36 +39,28 @@
 				
 				<!-- Javascript Setup -->
 				<script>
-					// Set largeBreakpoint to $large-breakpoint from our SASS _variables
-					const largeBreakpoint = getComputedStyle(document.body).getPropertyValue('--large-breakpoint').slice(0,3);
+					// Variables
+						// Set largeBreakpoint to $large-breakpoint from our SASS _variables
+						const largeBreakpoint = getComputedStyle(document.body).getPropertyValue('--large-breakpoint').slice(0,3);
 
-					const menuHeight = document.getElementById('nav-id').clientHeight + 'px';
+						// Set navBar for easy access
+						const navBar = document.getElementById('nav-id');
+						
+						// Assign all of the menu items to an array
+						const menuItems = document.getElementById('menu-main-menu').getElementsByTagName('li');
 
+						// Declare dropdown menu height
+						let menuHeight = document.getElementById('nav-id').clientHeight + 'px';
+
+						// Set menu to hide
+						let isHidden = true;
+					// End Variables
+					
 					// Make sure that hide is set correctly when the page loads
 					if(window.innerWidth < largeBreakpoint)
 					{
-						document.getElementById('nav-id').classList.add('hide');
 						document.getElementById('nav-id').style.height = 0;
 					}
-
-
-
-					// Assign all of the menu items to an array
-					const menuItems = document.getElementById('menu-main-menu').getElementsByTagName('li');
-					
-					
-					// nav animation development
-
-					// const menuHeight = '300px';
-					
-					console.log(document.getElementById('nav-id').clientHeight)
-					
-					console.log(menuHeight);
-
-					
-					// end development
-
-
 				</script>
 
 				<!-- Highlight Nothing if 404 -->
