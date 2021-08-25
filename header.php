@@ -39,24 +39,36 @@
 				
 				<!-- Javascript Setup -->
 				<script>
-					// const menuHeight = menu.style.height;
-					
 					// Set largeBreakpoint to $large-breakpoint from our SASS _variables
-					const largeBreakpoint = getComputedStyle(document.body).getPropertyValue('--large-breakpoint').slice(0,4);
-					
-					// Assign all of the menu items to an array
-					const menuItems = document.getElementById('menu-main-menu').getElementsByTagName('li');
+					const largeBreakpoint = getComputedStyle(document.body).getPropertyValue('--large-breakpoint').slice(0,3);
 
-					console.log(menuItems[0].offsetParent.offsetTop + menuItems[menuItems.length-1].offsetHeight + menuItems[menuItems.length-1].offsetTop);
-
-					// const menuHeight = menuItems.length * 60 + 'px';
-
-					const menuHeight = menuItems[0].offsetParent.offsetTop + menuItems[menuItems.length-1].offsetHeight + menuItems[menuItems.length-1].offsetTop - 50 + 'px';
-
-					console.log(menuHeight);
+					const menuHeight = document.getElementById('nav-id').clientHeight + 'px';
 
 					// Make sure that hide is set correctly when the page loads
-					if(window.innerWidth < largeBreakpoint) document.getElementById('nav-id').classList.add('hide');
+					if(window.innerWidth < largeBreakpoint)
+					{
+						document.getElementById('nav-id').classList.add('hide');
+						document.getElementById('nav-id').style.height = 0;
+					}
+
+
+
+					// Assign all of the menu items to an array
+					const menuItems = document.getElementById('menu-main-menu').getElementsByTagName('li');
+					
+					
+					// nav animation development
+
+					// const menuHeight = '300px';
+					
+					console.log(document.getElementById('nav-id').clientHeight)
+					
+					console.log(menuHeight);
+
+					
+					// end development
+
+
 				</script>
 
 				<!-- Highlight Nothing if 404 -->

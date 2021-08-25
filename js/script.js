@@ -5,7 +5,6 @@ function navToggle()
 	if (navBar.className === 'column nav-items')
 	{
 			navBar.classList.add('hide')
-
 			navBar.style.height = 0;
 			navBar.style.opacity = 0;
 	}
@@ -21,7 +20,14 @@ window.addEventListener('resize', event =>
 {
 	if (window.innerWidth > largeBreakpoint)
 	{
-		document.getElementById('nav-id').classList.remove('hide');
+		navBar.classList.remove('hide');
+		navBar.style.height = 'initial';
+		navBar.style.opacity = 1;
 	}
-	else document.getElementById('nav-id').classList.add('hide');
+	else
+	{
+		navBar.classList.add('hide')
+		navBar.style.height = 0;
+		navBar.style.opacity = 0;
+	}
 });
