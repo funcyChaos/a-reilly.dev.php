@@ -2,15 +2,15 @@ function navToggle()
 {
 	if (!isHidden)
 	{
-			isHidden = true
-			navBar.style.height = 0;
-			navBar.style.opacity = 0;
+		isHidden = true
+		navBar.style.height = 0;
+		navBar.style.opacity = 0;
 	}
 	else
 	{
-			isHidden = false;
-			navBar.style.height = menuHeight;
-			navBar.style.opacity = 1;
+		isHidden = false;
+		navBar.style.height = menuHeight;
+		navBar.style.opacity = 1;
 	}
 }
 
