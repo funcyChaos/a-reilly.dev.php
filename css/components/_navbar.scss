@@ -106,9 +106,13 @@
 		z-index: 100;
 		right: 1.7rem;
 		top: 108px;
-		// top: 6.7rem;
+		
+		transition-duration: .2s;
 
-		padding: 8px;
+		opacity: 0;
+		overflow: hidden;
+
+		padding: 8px 8px 0 8px;
 		background-color: variables.$main-color;
 		border-radius: .25rem;
 		border: solid black 3px;
@@ -141,11 +145,6 @@
 	{
 		flex-direction: column;
 	}
-}
-
-.hide
-{
-	display: none;
 }
 
 .column-menu
