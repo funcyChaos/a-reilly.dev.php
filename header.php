@@ -59,7 +59,7 @@
 					// Make sure that hide is set correctly when the page loads
 					if(window.innerWidth < largeBreakpoint)
 					{
-						document.getElementById('nav-id').style.height = 0;
+						navBar.style.height = 0;
 					}
 				</script>
 

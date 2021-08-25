@@ -27,8 +27,8 @@ window.addEventListener('resize', event =>
 		navBar.style.opacity = 0;
 
 		// Setup the dropdown menu height if it's been shrank
-		document.getElementById('nav-id').style.height = 'initial';
-		menuHeight = document.getElementById('nav-id').clientHeight + 'px';
-		document.getElementById('nav-id').style.height = 0;
+		navBar.style.height = 'initial';
+		menuHeight = navBar.clientHeight + 'px';
+		navBar.style.height = 0;
 	}
 });
