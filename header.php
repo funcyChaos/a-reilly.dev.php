@@ -41,7 +41,7 @@
 				<script>
 					// Variables
 						// Set largeBreakpoint to $large-breakpoint from our SASS _variables
-						const largeBreakpoint = getComputedStyle(document.body).getPropertyValue('--large-breakpoint').slice(0,3);
+						const largeBreakpoint = getComputedStyle(document.body).getPropertyValue('--large-breakpoint').replace(/\D/g,'');
 
 						// Set navBar for easy access
 						const navBar = document.getElementById('nav-id');
