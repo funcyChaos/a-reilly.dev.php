@@ -148,6 +148,9 @@ img {
     z-index: 100;
     right: 1.7rem;
     top: 108px;
+    transition-duration: 1s;
+    height: 0;
+    opacity: 0;
     padding: 8px;
     background-color: #07265F;
     border-radius: 0.25rem;
@@ -174,10 +177,6 @@ img {
     flex-direction: column;
   }
 }
-.hide {
-  display: none;
-}
-
 .column-menu {
   flex-direction: column;
   flex-wrap: wrap;

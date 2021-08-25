@@ -39,11 +39,21 @@
 				
 				<!-- Javascript Setup -->
 				<script>
+					// const menuHeight = menu.style.height;
+					
 					// Set largeBreakpoint to $large-breakpoint from our SASS _variables
 					const largeBreakpoint = getComputedStyle(document.body).getPropertyValue('--large-breakpoint').slice(0,4);
 					
 					// Assign all of the menu items to an array
 					const menuItems = document.getElementById('menu-main-menu').getElementsByTagName('li');
+
+					console.log(menuItems[0].offsetParent.offsetTop + menuItems[menuItems.length-1].offsetHeight + menuItems[menuItems.length-1].offsetTop);
+
+					// const menuHeight = menuItems.length * 60 + 'px';
+
+					const menuHeight = menuItems[0].offsetParent.offsetTop + menuItems[menuItems.length-1].offsetHeight + menuItems[menuItems.length-1].offsetTop + 'px';
+
+					console.log(menuHeight);
 
 					// Make sure that hide is set correctly when the page loads
 					if(window.innerWidth < largeBreakpoint) document.getElementById('nav-id').classList.add('hide');

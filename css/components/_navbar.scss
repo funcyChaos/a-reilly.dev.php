@@ -106,7 +106,12 @@
 		z-index: 100;
 		right: 1.7rem;
 		top: 108px;
-		// top: 6.7rem;
+		
+		transition-duration: 1s;
+
+		height: 0;
+		opacity: 0;
+
 
 		padding: 8px;
 		background-color: variables.$main-color;
@@ -143,10 +148,10 @@
 	}
 }
 
-.hide
-{
-	display: none;
-}
+// .hide
+// {
+// 	display: none;
+// }
 
 .column-menu
 {
