@@ -14,7 +14,7 @@ function navToggle()
 	}
 }
 
-window.addEventListener('resize', event =>
+function handleResize(event)
 {
 	if (window.innerWidth > largeBreakpoint)
 	{
@@ -31,4 +31,16 @@ window.addEventListener('resize', event =>
 		menuHeight = navBar.clientHeight + 'px';
 		navBar.style.height = 0;
 	}
+}
+
+// Maintain functionality during resizes
+window.addEventListener('resize', handleResize);
+
+// Temporarily remove event listener to allow keyboard to open
+document.getElementById('s').addEventListener('mouseup', () => {
+	console.log('text element actiive');
+	window.removeEventListener('resize', handleResize);
+	setTimeout(() => {
+		window.addEventListener('resize', handleResize);
+	}, 400);
 });
