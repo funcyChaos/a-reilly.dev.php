@@ -39,6 +39,12 @@
 		padding: 3px;
 		border-radius: .25rem;
 	}
+
+	a:hover
+	{
+		background-color: #fff;
+		color: black;
+	}
 	
 	.current-menu-item a, .current_page_parent a
 	{
@@ -65,12 +71,6 @@
 		@include mixins.main-border();
 		height: 1.3rem;
 	}
-
-	a:hover
-	{
-		background-color: #fff;
-		color: black;
-	}
 }
 
 .dropdown_
@@ -78,13 +78,12 @@
 	display: none;
 }
 
-.menu:hover
+.dropdown_:hover
 {
 	cursor: pointer;
 	color: black;
 	background-color: white;
 }
-
 
 .nav-items
 {
@@ -98,6 +97,7 @@
 	.dropdown_
 	{
 		display: flex;
+		cursor: pointer;
 	}
 
 	.nav-items

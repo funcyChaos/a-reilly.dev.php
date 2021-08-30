@@ -6,7 +6,6 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		
-		
 		<? wp_head();?>
 	</head>
 	
@@ -40,8 +39,7 @@
 				<!-- Javascript Setup -->
 				<script>
 					// Variables
-						// Set largeBreakpoint to $large-breakpoint from our SASS _variables
-						const largeBreakpoint = getComputedStyle(document.body).getPropertyValue('--large-breakpoint').replace(/\D/g,'');
+						const largeBreakpoint = parseInt(getComputedStyle(document.body).getPropertyValue('--large-breakpoint'));
 
 						// Set navBar for easy access
 						const navBar = document.getElementById('nav-id');

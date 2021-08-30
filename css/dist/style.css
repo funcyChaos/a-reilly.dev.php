@@ -100,6 +100,10 @@ img {
   padding: 3px;
   border-radius: 0.25rem;
 }
+.nav-cell a:hover {
+  background-color: #fff;
+  color: black;
+}
 .nav-cell .current-menu-item a, .nav-cell .current_page_parent a {
   background-color: white;
   color: black;
@@ -118,16 +122,12 @@ img {
   border-radius: 0.2rem;
   height: 1.3rem;
 }
-.nav-cell a:hover {
-  background-color: #fff;
-  color: black;
-}
 
 .dropdown_ {
   display: none;
 }
 
-.menu:hover {
+.dropdown_:hover {
   cursor: pointer;
   color: black;
   background-color: white;
@@ -141,6 +141,7 @@ img {
 @media only screen and (max-width: 840px) {
   .dropdown_ {
     display: flex;
+    cursor: pointer;
   }
 
   .nav-items {
