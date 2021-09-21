@@ -17,7 +17,7 @@ $grid-columns: 1rem minmax(12rem, max-content) repeat(12, 1fr) 1rem;
 
 	grid-template-columns: $grid-columns;
 
-	grid-template-rows: 100px calc(100vh - 140px) 1rem minmax(4rem, max-content) auto 200px;
+	grid-template-rows: 100px calc(100vh - 140px) 1rem auto 200px;
 
 	gap: 8px;
 
@@ -36,7 +36,7 @@ $grid-columns: 1rem minmax(12rem, max-content) repeat(12, 1fr) 1rem;
 {
 	.grid-container-index
 	{
-		grid-template-rows: 150px calc(100vh - 170px) 1rem minmax(4rem, max-content) auto 200px;
+		grid-template-rows: 150px calc(100vh - 170px) 1rem auto 200px;
 	}
 }
 

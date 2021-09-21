@@ -32,7 +32,8 @@
 
 					<? wp_nav_menu(array('theme_location'=>'headerMenu',
 					'container'=>'',
-					'menu_class'=>''
+					'menu_class'=>'',
+					'menu_id'=>'header-menu'
 					));?>
 				</div>
 				
@@ -45,7 +46,7 @@
 						const navBar = document.getElementById('nav-id');
 						
 						// Assign all of the menu items to an array
-						const menuItems = document.getElementById('menu-main-menu').getElementsByTagName('li');
+						const menuItems = document.getElementById('header-menu').getElementsByTagName('li');
 
 						// Declare dropdown menu height
 						let menuHeight = document.getElementById('nav-id').clientHeight + 'px';
