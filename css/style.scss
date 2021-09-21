@@ -107,12 +107,18 @@ Mixins
 
 	min-height: 100vh;
 
-	// background-color: variables.$main-color;
-
 	img
 	{
 		@include mixins.main-border();
 	}
+}
+
+.front-page-user
+{
+	grid-column: 3 / 14;
+	grid-row: 2 / 6;
+
+	margin-top: 2rem;
 }
 
 @media only screen and (max-width: variables.$small-breakpoint)

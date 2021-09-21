@@ -18,19 +18,19 @@ img {
   margin-top: 10px;
   display: grid;
   grid-template-columns: 1rem minmax(12rem, max-content) repeat(12, 1fr) 1rem;
-  grid-template-rows: 100px calc(100vh - 140px) 1rem minmax(4rem, max-content) auto 200px;
+  grid-template-rows: 100px calc(100vh - 140px) 1rem auto 200px;
   gap: 8px;
-  grid-template-areas: ". nav nav nav nav nav nav nav nav nav nav nav nav nav ." ". hero hero hero hero hero hero hero hero hero hero hero hero hero ." ". . . . . . . . . . . . . . ." ". . content content content content content content content content content content content . ." ". . content content content content content content content content content content content . ." "footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer";
+  grid-template-areas: ". nav nav nav nav nav nav nav nav nav nav nav nav nav ." ". hero hero hero hero hero hero hero hero hero hero hero hero hero ." ". . . . . . . . . . . . . . ." ". . content content content content content content content content content content content . ." "footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer";
 }
 
 @media only screen and (max-width: 840px) {
   .grid-container-index {
-    grid-template-areas: ". nav nav nav nav nav nav nav nav nav nav nav nav nav ." ". hero hero hero hero hero hero hero hero hero hero hero hero hero ." ". . . . . . . . . . . . . . ." ". content content content content content content content content content content content content content ." ". content content content content content content content content content content content content content ." "footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer";
+    grid-template-areas: ". nav nav nav nav nav nav nav nav nav nav nav nav nav ." ". hero hero hero hero hero hero hero hero hero hero hero hero hero ." ". . . . . . . . . . . . . . ." ". content content content content content content content content content content content content content ." "footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer";
   }
 }
 @media only screen and (max-width: 430px) {
   .grid-container-index {
-    grid-template-rows: 150px calc(100vh - 170px) 1rem minmax(4rem, max-content) auto 200px;
+    grid-template-rows: 150px calc(100vh - 170px) 1rem auto 200px;
   }
 }
 .grid-container-sidebar {
@@ -293,7 +293,7 @@ img {
 }
 
 .wp-her-img img {
-  height: calc(100vh-120px);
+  height: calc(100vh - 120px);
   width: 100px;
 }
 
@@ -394,6 +394,12 @@ Mixins
 .main-content-cell img {
   border: solid;
   border-radius: 0.2rem;
+}
+
+.front-page-user {
+  grid-column: 3/14;
+  grid-row: 2/6;
+  margin-top: 2rem;
 }
 
 @media only screen and (max-width: 430px) {
