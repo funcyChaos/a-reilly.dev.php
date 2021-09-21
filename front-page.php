@@ -1,26 +1,46 @@
-<? get_header();?>
+<? get_header();
+
+if(get_post()->post_content == '')
+{
+	?>
+	<!-- HERO IMAGE -->
+	<div class="hero-cell">
+		<h2>Why does Peter Pan always fly?</h2>
+		<div>
+			<h2 class="align-self-end">Because he never lands.</h2>
+			<h2 class="align-self-end">haha, that joke never gets old...</h2>
+		</div>
+	</div>
+	
+	<main class="main-content-cell align-items-center justify-space-between alignc-center">
+		<div class="column">
 			
-			<!-- HERO IMAGE -->
-			<div class="hero-cell">
-				<h2>Why does Peter Pan always fly?</h2>
-				<div>
-					<h2 class="align-self-end">Because he never lands.</h2>
-					<h2 class="align-self-end">haha, that joke never gets old...</h2>
-				</div>
-			</div>
-
-			<main class="main-content-cell align-items-center justify-space-between alignc-center">
-				<div class="column">
-					
-					<p>Welcome to my domain!</p>
+			<p>Welcome to my domain!</p>
 	
-					<p>Here you can learn more about me and my different projects.</p>
+			<p>Here you can learn more about me and my different projects.</p>
 	
-					<p>Or maybe you’re just here to inspect my website code</p>
-				</div>
-				<div class="column">
-					<img src="<? echo get_theme_file_uri('/images/hi-there.gif');?>" alt="hi there">
-				</div>
-			</main>
+			<p>Or maybe you’re just here to inspect my website code</p>
+		</div>
+		<div class="column">
+			<img src="<? echo get_theme_file_uri('/images/hi-there.gif');?>" alt="hi there">
+		</div>
+	</main>
+	<?
+}
+else
+{
+?>
+	<div class="front-page-user">
+	<?
+		if(have_posts())
+		{
+			the_post();
+			the_content();
+		}
+	?>
+	</div>
+<?
+}
+			
 
-<? get_footer();?>
+get_footer();?>
