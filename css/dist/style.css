@@ -402,11 +402,6 @@ Mixins
   border-radius: 0.2rem;
 }
 
-@media (max-width: 840px) {
-  .main-content-cell .column {
-    width: initial;
-  }
-}
 .front-page-user {
   grid-column: 3/14;
   grid-row: 2/6;

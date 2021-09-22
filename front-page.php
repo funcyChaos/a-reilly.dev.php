@@ -25,6 +25,21 @@ if(get_post()->post_content == '')
 				'How does one non-binary person kill another non-binary person?',
 				'They Slash Them',
 				'haha'
+			),
+			array(
+				'Why did the coffee file a police report?',
+				'It got mugged.'
+				'Get it? haha MUGged'
+			),
+			array(
+				'This fireplace has cracks in it.',
+				"It's having a mantle breakdown...",
+				'yup'
+			),
+			array(
+				'If Mississippi gave Missouri her New Jersey, then what would Delaware',
+				"I don't know but Alaska",
+				''
 			)
 		);
 		
