@@ -111,10 +111,26 @@ Mixins
 
 	min-height: 100vh;
 
+	.column
+	{
+		width: 40%;
+		margin: 1rem;
+	}
+
 	img
 	{
+		margin: 1rem;
+
 		@include mixins.main-border();
 	}
+}
+
+@media (max-width: variables.$large-breakpoint)
+{
+		.main-content-cell .column
+		{
+			width: initial;
+		}
 }
 
 .front-page-user

@@ -73,18 +73,25 @@ if(get_post()->post_content == '')
 			<h2 class="align-self-end"><? echo $jokes[$whichJoke][2];?></h2>
 		</div>
 	</div>
+
+	<?
+	if(get_field('greetings_text') == '')$greetingsText = '
+		<p>Welcome to my domain!</p>
+		<p>Here you can learn more about me and my different projects.</p>
+		<p>Or maybe you’re just here to inspect my website code</p>
+	';
+	else $greetingsText = '<p>'.get_field('greetings_text').'</p>';
+
+	if(get_field('image_url') == '')$imageUrl = get_theme_file_uri('/images/hi-there.gif');
+	else $imageUrl = get_field('image_url');
+	?>
 	
 	<main class="main-content-cell align-items-center justify-space-between alignc-center">
 		<div class="column">
-			
-			<p>Welcome to my domain!</p>
-	
-			<p>Here you can learn more about me and my different projects.</p>
-	
-			<p>Or maybe you’re just here to inspect my website code</p>
+			<? echo $greetingsText;?>
 		</div>
 		<div class="column">
-			<img src="<? echo get_theme_file_uri('/images/hi-there.gif');?>" alt="hi there">
+			<img src="<? echo $imageUrl;?>" alt="hi there">
 		</div>
 	</main>
 	<?
