@@ -69,8 +69,8 @@ Mixins
 	flex-direction: column;
 	justify-content: space-between;
 	
-	background: url('') no-repeat center;
-	background-size: contain;
+	// background: url('') no-repeat center;
+	// background-size: contain;
 
 	@include mixins.main-border();
 
@@ -84,6 +84,10 @@ Mixins
 		justify-content: space-between;
 
 		margin-top: .5rem;
+	}
+	svg
+	{
+		margin: 1rem 0;
 	}
 }
 

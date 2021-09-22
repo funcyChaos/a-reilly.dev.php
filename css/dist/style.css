@@ -365,8 +365,6 @@ Mixins
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background: url("") no-repeat center;
-  background-size: contain;
   border: solid;
   border-radius: 0.2rem;
   background-color: #17B6FF;
@@ -377,6 +375,9 @@ Mixins
   flex-direction: column;
   justify-content: space-between;
   margin-top: 0.5rem;
+}
+.hero-cell svg {
+  margin: 1rem 0;
 }
 
 @media only screen and (max-width: 430px) {
