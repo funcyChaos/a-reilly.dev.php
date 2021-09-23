@@ -58,7 +58,7 @@ img {
   grid-template-columns: 1rem minmax(12rem, max-content) repeat(12, 1fr) 1rem;
   grid-template-rows: 100px auto 200px;
   gap: 8px;
-  grid-template-areas: ". nav nav nav nav nav nav nav nav nav nav nav nav nav ." ". . . content content content content content content content content content . . ." "footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer";
+  grid-template-areas: ". nav nav nav nav nav nav nav nav nav nav nav nav nav ." ". . content content content content content content content content content . . . ." "footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer";
 }
 
 @media only screen and (max-width: 840px) {
