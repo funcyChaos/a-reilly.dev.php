@@ -45,6 +45,11 @@ if(get_post()->post_content == '')
 				'Did you guys hear about the circus fire?',
 				'It was in tents',
 				'everyone is Ok'
+			),
+			array(
+				'this is',
+				'a new',
+				'array'
 			)
 		);
 		
