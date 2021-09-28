@@ -6,8 +6,8 @@
 
 		<?
 		$videos = array('7j8YktVCBmQ', 'T_Gzbg-ToyA','LnzuMJLZRdU','QZwneRb-zqA','TR1q9NkmmRM','nxM1cnphLpw','L1tx-wAI6Nw','mAn2weuytUA');
-		$numberOfVideos = count($videos);
-		$whichVideo = rand(0,$numberOfVideos)-1;
+		$videoCount = count($videos);
+		$whichVideo = rand(0,$videoCount)-1;
 		if($whichVideo<0)$whichVideo++;
 		?>
 		<iframe width="100%" height="500px" src="https://www.youtube.com/embed/<? echo $videos[$whichVideo];?>?&autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
