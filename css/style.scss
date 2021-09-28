@@ -137,7 +137,11 @@ Mixins
 {
 	.main-content-cell>.column>img
 	{
-		width: 80vw;
+		width: 100%;
+	}
+	.main-content-cell .column
+	{
+		width: 100%;
 	}
 }
 
