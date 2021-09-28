@@ -69,8 +69,8 @@ Mixins
 	flex-direction: column;
 	justify-content: space-between;
 	
-	background: url('') no-repeat center;
-	background-size: contain;
+	// background: url('') no-repeat center;
+	// background-size: contain;
 
 	@include mixins.main-border();
 
@@ -84,6 +84,10 @@ Mixins
 		justify-content: space-between;
 
 		margin-top: .5rem;
+	}
+	svg
+	{
+		margin: 1rem 0;
 	}
 }
 
@@ -107,8 +111,16 @@ Mixins
 
 	min-height: 100vh;
 
+	.column
+	{
+		width: 40%;
+		margin: 1rem;
+	}
+
 	img
 	{
+		margin: 1rem;
+
 		@include mixins.main-border();
 	}
 }
@@ -125,7 +137,11 @@ Mixins
 {
 	.main-content-cell>.column>img
 	{
-		width: 80vw;
+		width: 100%;
+	}
+	.main-content-cell .column
+	{
+		width: 100%;
 	}
 }
 

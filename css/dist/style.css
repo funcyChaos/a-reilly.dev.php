@@ -58,7 +58,7 @@ img {
   grid-template-columns: 1rem minmax(12rem, max-content) repeat(12, 1fr) 1rem;
   grid-template-rows: 100px auto 200px;
   gap: 8px;
-  grid-template-areas: ". nav nav nav nav nav nav nav nav nav nav nav nav nav ." ". . . content content content content content content content content content . . ." "footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer";
+  grid-template-areas: ". nav nav nav nav nav nav nav nav nav nav nav nav nav ." ". . content content content content content content content content content . . . ." "footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer";
 }
 
 @media only screen and (max-width: 840px) {
@@ -365,8 +365,6 @@ Mixins
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background: url("") no-repeat center;
-  background-size: contain;
   border: solid;
   border-radius: 0.2rem;
   background-color: #17B6FF;
@@ -377,6 +375,9 @@ Mixins
   flex-direction: column;
   justify-content: space-between;
   margin-top: 0.5rem;
+}
+.hero-cell svg {
+  margin: 1rem 0;
 }
 
 @media only screen and (max-width: 430px) {
@@ -391,7 +392,12 @@ Mixins
   padding: 0.5rem;
   min-height: 100vh;
 }
+.main-content-cell .column {
+  width: 40%;
+  margin: 1rem;
+}
 .main-content-cell img {
+  margin: 1rem;
   border: solid;
   border-radius: 0.2rem;
 }
@@ -404,7 +410,11 @@ Mixins
 
 @media only screen and (max-width: 430px) {
   .main-content-cell > .column > img {
-    width: 80vw;
+    width: 100%;
+  }
+
+  .main-content-cell .column {
+    width: 100%;
   }
 }
 .sidebar-cell {
