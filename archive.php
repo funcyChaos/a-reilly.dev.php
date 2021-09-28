@@ -2,7 +2,7 @@
 
 	<div class="sidebar-cell" id="lcell">
 		<a href="<? echo site_url('/blog');?>">&ltall&gt</a>
-		<? 
+		<?
 		$currentCategory = get_queried_object();
 		foreach(get_categories() as $category) : ?>
 			<a
