@@ -18,7 +18,7 @@
 			<nav class="nav-cell" id="nav-cell-change">
 
 				<?
-				echo '<a href="' . site_url() . '" class="nav-brand">' . '<img src="' . esc_url(wp_get_attachment_image_url(get_theme_mod('custom_logo'), 'full')) . '" alt=""></a>';
+					echo '<a href="' . site_url() . '" class="nav-brand">' . '<img src="' . esc_url(wp_get_attachment_image_url(get_theme_mod('custom_logo'), 'full')) . '" alt=""></a>';
 				?>
 
 				<h2><a href="<? echo site_url();?>" class="nav-brand"><?
@@ -67,10 +67,7 @@
 				if(is_404())
 				{ ?>
 					<script>
-						for(let i = 0; i < menuItems.length; i++)
-						{
-							menuItems[i].classList.remove('current_page_parent');
-						}
+						for(let i = 0; i < menuItems.length; i++){menuItems[i].classList.remove('current_page_parent');}
 					</script> <?
 				} ?>
 
