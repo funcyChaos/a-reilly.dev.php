@@ -50,12 +50,23 @@ if(get_post()->post_content == '')
 				'Why did the coffee file a police report?',
 				'Cause it got mugged',
 				'obviously'
+			),
+			array(
+				'Why was the mushroom invited to the party?',
+				'Because he was a fungi',
+				'get it, like fun Guy'
+			),
+			array(
+				'How do you tell the difference between a crocodile and an alligator?',
+				'One sees you later',
+				'And one sees you in a while'
 			)
 		);
 		
 		$numberOfJokes = count($jokes);
 		$whichJoke = rand(0,$numberOfJokes)-1;
-		if($whichJoke<0)$whichJoke++;
+		if($whichJoke<0)
+			$whichJoke++;
 	}
 	else
 	{
@@ -87,7 +98,8 @@ if(get_post()->post_content == '')
 
 	$svgCount = count($svgHero);
 	$whichSvg = rand(0,$svgCount)-1;
-	if($whichSvg<0)$whichSvg++;
+	if($whichSvg<0)
+		$whichSvg++;
 	?>
 	<!-- HERO IMAGE -->
 	<div class="hero-cell">
