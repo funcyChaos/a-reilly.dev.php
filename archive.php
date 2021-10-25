@@ -13,7 +13,7 @@
  		endforeach;?>
 	</div>
 
-	<main class="main-content-cell column justify-start p0">
+	<main class="main-content-cell column justify-content-center">
 
 		<?
 		while (have_posts())
